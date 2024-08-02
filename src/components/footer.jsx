@@ -1,7 +1,7 @@
-//eslint-disable
+/* eslint-disable */
 
 import BlueLogo from "../static/images/iste-logo-blue.png";
-export default () => {
+export default function footer (){
 
   const footerNavs = [
       {
