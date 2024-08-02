@@ -21,28 +21,28 @@ const ImageCarousel = () => {
     technexImage3,
   ];
 
-  
-    return (
-      <div className="carousel-container">
-        <div className="carousel-wrapper">
-          <Carousel
-            showArrows={false}
-            showThumbs={false}
-            showStatus={false}
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-          >
-            {carouselImages.map((image, index) => (
-              <div key={index}>
-                <img src={image} alt={`img ${index + 1}`} />
-              </div>
-            ))}
-          </Carousel>
-        </div>
+  return (
+    <div className="carousel-container">
+      <div className="carousel-wrapper">
+        <Carousel
+          showArrows={false}
+          showThumbs={false}
+          showStatus={false}
+          autoPlay={true}
+          interval={3000}
+          infiniteLoop={true}
+          centerMode={false}
+          selectedItem={0}
+        >
+          {carouselImages.map((image, index) => (
+            <div key={index} className="carousel-image-container">
+              <img src={image} alt={`img ${index + 1}`} className="carousel-image" />
+            </div>
+          ))}
+        </Carousel>
       </div>
-    );
-  };
-  
-  export default ImageCarousel;
-  
+    </div>
+  );
+};
+
+export default ImageCarousel;
