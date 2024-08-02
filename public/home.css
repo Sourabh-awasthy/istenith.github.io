@@ -481,10 +481,9 @@
 }
 
 .carousel-wrapper {
-  background-color: var(--link-color);
   border-radius: 10px;
   padding: 2px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-wrapper .carousel .slide {

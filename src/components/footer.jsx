@@ -1,101 +1,126 @@
-// Footer.jsx
-import "react-bootstrap"
-import React from "react";
+/* eslint-disable */
+
 import BlueLogo from "../static/images/iste-logo-blue.png";
-import instagramIcon from "../static/images/icons/instagram.png";
-import facebookIcon from "../static/images/icons/facebook.png";
-import githubIconDark from "../static/images/icons/github-dark2.png";
-import twitterIcon from "../static/images/icons/twitter.png";
-import linkedinIcon from "../static/images/icons/linkedin.png";
+export default function footer (){
 
-const Footer = () => {
+  const footerNavs = [
+      {
+          href: 'https://github.com/istenith',
+          name: 'Github'
+      },
+      {
+          href: 'https://www.linkedin.com/company/iste-nith/',
+          name: 'LinkedIn'
+      },
+      {
+          href: 'https://www.facebook.com/teamistenith/',
+          name: 'Facebook'
+      },
+      {
+          href: 'https://www.instagram.com/teamistenith',
+          name: 'Instagram'
+      }
+  ];
+
+  const footerStyles = {
+      paddingTop: '10rem',
+  };
+
+  const containerStyles = {
+      maxWidth: '1440px',
+      margin: '0 auto',
+      padding: '0 1rem',
+      color: '#f3f4f6',
+  };
+
+  const logoContainerStyles = {
+      marginTop: '1.5rem',
+      marginBottom: '1.5rem',
+      textAlign: 'center',
+      maxWidth: '28rem',
+      margin: '0 auto',
+  };
+
+  const logoStyles = {
+      width: '8rem',
+      margin: '0 auto',
+  };
+
+  const bottomContainerStyles = {
+      marginTop: '2.5rem',
+      paddingTop: '2.5rem',
+      paddingBottom: '2.5rem',
+      borderTop: '1px solid #e5e7eb',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+  };
+
+  const ulStyles = {
+      display: 'flex',
+      flexWrap: 'wrap',
+      marginTop: '1.5rem',
+      marginBottom: '0',
+      fontSize: '0.875rem',
+  };
+
+  const liStyles = {
+      color: '#f3f4f6',
+      transition: 'color 0.15s',
+  };
+
+  const aStyles = {
+      color: '#f3f4f6',
+      textDecoration: 'none',
+  };
+
   return (
-    <div className="footer container-fluid ">
-      <div className="section__padding row ">
-
-
-      <div className="footer__social-links margin-about col-lg-4">
-            <h4>Connect with Us</h4>
-            <div className="socialmedia">
-              <a
-                href="https://www.instagram.com/teamistenith/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={instagramIcon}
-                  alt="Instagram"
-                  className="footer__social-icon"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/iste-nith/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={linkedinIcon}
-                  alt="LinkedIn"
-                  className="footer__social-icon"
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/teamistenith/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={facebookIcon}
-                  alt="Facebook"
-                  className="footer__social-icon"
-                />
-              </a>
-              <a
-                href="https://github.com/istenith"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={githubIconDark}
-                  alt="GitHub"
-                  className="footer__social-icon"
-                />
-              </a>
-              <a
-                href="https://twitter.com/IsteNith"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={twitterIcon}
-                  alt="Twitter"
-                  className="footer__social-icon"
-                />
-              </a>
-            </div>
+      <footer style={footerStyles}>
+          <div style={containerStyles}>
+              <div style={logoContainerStyles}>
+                  <img 
+                    src={BlueLogo} 
+                    alt="ISTE Logo"
+                    style={logoStyles} 
+                  />
+                  <p>
+                      ISTE NITH
+                  </p>
+              </div>
+              <div style={bottomContainerStyles}>
+                  <p>© 2024 All rights reserved.</p>
+                  <ul style={ulStyles}>
+                      {
+                          footerNavs.map((item, idx) => (
+                              <li
+                                  key={idx}
+                                  style={liStyles}
+                                  onMouseEnter={e => e.target.style.color = '#6b7280'}
+                                  onMouseLeave={e => e.target.style.color = '#f3f4f6'}
+                              >
+                                  <a style={aStyles} href={item.href}>
+                                      {item.name}
+                                  </a>
+                              </li>
+                          ))
+                      }
+                  </ul>
+              </div>
           </div>
+          <style jsx>{`
+              @media (max-width: 600px) {
+                  ul {
+                      gap: 0.1px;
+                  }
+              }
 
-        <div className="footer__content ">
-          <div className="footer__logo margin-about col-lg-4">
-            <img src={BlueLogo} alt="ISTE Logo" />
-          </div>
-        </div>
-          
-
-
-          
-
-        </div>
-
-        <hr />
-                        <h6 className="rights">All rights reserved by ISTE NITH@{new Date().getFullYear()}</h6>
-
-
-       
-        
-      
-    </div>
+              @media (min-width: 601px) {
+                  ul {
+                      gap: 2rem;
+                  }
+              }
+          `}</style>
+      </footer>
   );
 };
-
-export default Footer;

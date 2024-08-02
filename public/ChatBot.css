@@ -13,8 +13,7 @@
 .w3c__message--icon {
   background-color: var(--link-color);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -33,8 +32,8 @@
 .w3c__close--icon img {
   position: absolute;
   max-width: 14px;
-  left: 50%;
-  top: 50%;
+  right: 20%;
+  top: 12%;
   margin-left: -7px;
   margin-top: -7px;
   transform: rotate(-30deg);
