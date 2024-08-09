@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 import Footer from '@/components/footer';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { BiSolidContact } from "react-icons/bi";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { HiOutlineMailOpen } from "react-icons/hi";        
@@ -11,6 +12,7 @@ import React, { useState } from 'react';
 import DomainPage from './domainspage/page';
 import Image from 'next/image'
 import {motion } from "framer-motion";
+import Loader from '@/components/loader';
 
 
 
@@ -32,6 +34,21 @@ const Homepage = () => {
 
  
   const [domain,setdomain] = useState<{ title: string; description: string; } | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data fetching or any other asynchronous operation
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Simulate a 1 second loading time
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   
 
 
@@ -41,6 +58,31 @@ return (
 
 
   <div className="h-screen bg-[#171616] text-white">
+  {/* Scroll bar styling */}
+  <style jsx>{`
+    /* Customize scroll bar for WebKit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #171616;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffffff;
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #cccccc;
+    }
+
+    /* Customize scroll bar for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #171616;
+  `}</style>
   
 
   <Image src="/assets/images/util/iste_logo-01-removebg-preview.webp" 
@@ -208,7 +250,7 @@ return (
 
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#171616]  text-white  -mt-1 lg:mt-0">
       <h1 className=" text-5xl lg:text-[88px] font-barlowmedium mb-12">CONTACT</h1>
-      <p className=" lg:text-[32px] text-2xl px-12 lg:px-32  text-[#FFFFFF]  mb-0 lg:mb-40 text-center font-actor">
+      <p className=" lg:text-[32px] text-2xl px-12 lg:px-32  text-[#FFFFFF]  mb-0 lg:mb-0 text-center font-actor">
         Have a question or need assistance? Our team is always ready to help.
         Feel free to reach out, and we will be delighted to aid you by providing heartfelt support.
       </p>
@@ -219,21 +261,21 @@ return (
     <footer className='  bg-[#171616] z-50'>
     <div className=" flex flex-col  lg:flex-row w-full justify-between   mt-0 ">
     <div className=" flex lg:flex-row  mx-12 lg:ml-20 items-center">
-      <FaMapLocationDot className=" size-20 lg:size-24  " />
+      <FaMapLocationDot className=" size-20 lg:size-20  " />
       <div className='lg:ml-8 ml-8'>
         <p className="text-1.2xl font-barlow">Address</p>
         <p className="text-1.2xl font-barlow">NIT, Hamirpur<br />Himachal Pradesh,<br/> India, 177001</p>
       </div>
     </div>
     <div className=" flex lg:flex-row  mx-12 mt-7 items-center ">
-      <BiSolidContact className=" size-16 lg:size-24  " />
+      <BiSolidContact className=" size-16 lg:size-20  " />
       <div className=' ml-12 lg:ml-4'>
         <p className="text-1.2xl font-barlow">Phone</p>
         <p className="text-1.2xl font-actor">12345578</p>
       </div>
     </div>
     <div className="lg:mr-20 flex lg:flex-row mt-7 mx-12 items-center">
-      <HiOutlineMailOpen className=" size-20 lg:size-24 " />
+      <HiOutlineMailOpen className=" size-20 lg:size-20 " />
       <div className='lg:ml-8 ml-8  '>
         <p className="text-1.2xl font-barlow " >Email</p>
         <p className="text-1.2xl font-barlow ">iste@nith.ac.in</p>

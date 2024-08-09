@@ -29,6 +29,9 @@ const config: Config = {
       height: {
         '155': '155px',
       },
+      gridTemplateRows: {
+        '21': 'repeat(21, minmax(0, 1fr))',
+      },
       colors: {
         'custom-black': "#252525",
         'custom-white': "#F2F2F2",

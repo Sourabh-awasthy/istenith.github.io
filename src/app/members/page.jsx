@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ApolloClient, InMemoryCache, useQuery, gql, ApolloProvider } from '@apollo/client';
 import { FaInstagram } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/navbar1';
 import Footer from '../../components/footer';
+import Loader from "../../components/loader"; // Import the loader component
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql/',
@@ -33,14 +34,28 @@ const GET_MEMBERS = gql`
 
 const Team = () => {
   const [initialYear, setYear] = useState("final");
+  const [isLoading, setIsLoading] = useState(true); // Renamed this loading state to avoid conflict
 
   const { loading, error, data } = useQuery(GET_MEMBERS, {
     client,
     fetchPolicy: 'cache-first',
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  useEffect(() => {
+    // Simulate data fetching or any other asynchronous operation
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Simulate a 1 second loading time
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+
+  if (isLoading || loading) { // Check both loading states
+    return <Loader />;
+  }
+ 
+
+
 
   const filteredProfiles = data.members.filter(profile => profile.section === initialYear);
 

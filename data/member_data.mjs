@@ -542,4 +542,115 @@ export const profileDetails = [
 },
 
 
+//First year
+
+{ 
+  name: "Member1",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "AbC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member2",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "AbC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+{ 
+  name: "Member3",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+{ 
+  name: "Member4",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member5",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+{ 
+  name: "Member6",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member7",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member8",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+
   ];

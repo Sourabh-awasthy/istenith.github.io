@@ -7,6 +7,7 @@ import "../globals.css";
 import { motion } from "framer-motion";
 import Navbar from "../../components/navbar1";
 import Footer from '../../components/footer';
+import Loader from "../../components/loader"; 
 
 // Custom arrows for the slider
 const CustomPrevArrow: React.FC<any> = (props) => (
@@ -42,6 +43,8 @@ const settings = {
 
 const Projects = () => {
   const [topics, setTopics] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true); 
+
 
   useEffect(() => {
     const fetchTopics = async () => {
@@ -58,11 +61,19 @@ const Projects = () => {
         setTopics(data.topics);
       } catch (error) {
         console.log("Error loading topics: ", error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false); // Set loading to false after a 1000ms delay
+        }, 2000);
       }
     };
 
     fetchTopics();
   }, []);
+
+  if (loading) {
+    return <Loader />; // Show loader while fetching data
+  }
 
   return (
     <>

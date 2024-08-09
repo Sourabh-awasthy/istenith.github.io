@@ -1,14 +1,30 @@
 "use client";
 import { Content } from "../../../data/events.mjs";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CardContainer, CardBody, CardItem } from "../../components/ui/sticky-scroll-reveal";
 import Link from "next/link";
 import Footer from "../../components/footer";
 import { BackgroundBeams } from "@/components/ui/background_beams";
 import Navbar from "@/components/navbar1";
+import Loader from "@/components/loader";  // Import the Loader component
 
 export default function ThreeDCardDemo() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data fetching or any other asynchronous operation
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Simulate a 1 second loading time
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
       <Navbar />
@@ -18,7 +34,7 @@ export default function ThreeDCardDemo() {
           EVENTS
         </div>
         <div className="border-t-2 border-gray-200 md:mx-20 lg:mx-20 mx-4 lg:mt-2"></div>
-        <div className="snap-y snap-mandatory overflow-y-auto  grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 ">
+        <div className="snap-y snap-mandatory overflow-y-auto grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 ">
           {Content.map((item, index) => (
             <CardContainer
               key={index}
