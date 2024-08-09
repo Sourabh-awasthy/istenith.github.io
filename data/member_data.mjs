@@ -245,7 +245,7 @@ export const profileDetails = [
     location: "Bareilly, Uttar Pradesh",
     instagram: "https://instagram.com/alternate_manyu?igshid=YmMyMTA2M2Y=",
     linkedin: "http://linkedin.com/in/abhimanyu-singh-326343266",
-    img: "/assets/images/thirdyear/abhimanyu.webp",
+    img: "/assets/images/thirdyear/Abhimanyu.webp",
     post: "Co-Ordinator",
   },
   {
@@ -255,7 +255,7 @@ export const profileDetails = [
     location: "Haridwar, Uttarakhand",
     instagram: "https://instagram.com/_.adityasharma_._?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/aditya-sharma-82997921b",
-    img: "/assets/images/thirdyear/adityasharma.webp",
+    img: "/assets/images/thirdyear/aditya1.webp",
     post: "Co-Ordinator",
   },
   {
@@ -265,7 +265,7 @@ export const profileDetails = [
     location: "Solan, Himachal Pradesh",
     instagram: "https://instagram.com/ig_ankuryadav?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/ankuryadavsolan",
-    img: "/assets/images/thirdyear/ankur.webp",
+    img: "/assets/images/thirdyear/Ankur.webp",
     post: "Co-Ordinator",
   },
   {
@@ -307,7 +307,7 @@ export const profileDetails = [
     location: "Lucknow, Uttar Pradesh",
     instagram: "https://instagram.com/ayushii_05_?igshid=NmQ2ZmYxZjA=",
     linkedin: "https://www.linkedin.com/in/ayushi-shukla-7498b125b",
-    img: "/assets/images/thirdyear/ayushishukla.webp",
+    img: "/assets/images/thirdyear/ayushi.webp",
     post: "Co-Ordinator",
   },
   {
@@ -327,7 +327,7 @@ export const profileDetails = [
     location: "Hamirpur, Himachal Pradesh",
     instagram: "https://instagram.com/kunal_dhiman27971",
     linkedin: "",
-    img: "/assets/images/thirdyear/kunaldhiman.webp",
+    img: "/assets/images/thirdyear/kunal.webp",
     post: "Co-Ordinator",
   },
   {
@@ -337,7 +337,7 @@ export const profileDetails = [
     location: "Haldwani, Uttarakhand",
     instagram: "https://instagram.com/bhandari_g.29",
     linkedin: "https://www.linkedin.com/in/laksh-bhandari-70a4b225b",
-    img: "/assets/images/thirdyear/laksh.webp",
+    img: "/assets/images/thirdyear/lakshaya.webp",
     post: "Co-Ordinator",
   },
   {
@@ -347,7 +347,7 @@ export const profileDetails = [
     location: "Delhi, Delhi",
     instagram: "https://instagram.com/a.gyaani.ladka?igshid=YmMyMTA2M2Y=",
     linkedin: "https://www.linkedin.com/in/mehul-ambastha-234b92175/",
-    img: "/assets/images/thirdyear/mehulambastha.webp",
+    img: "/assets/images/thirdyear/mehul.webp",
     post: "Co-Ordinator",
   },
   {
@@ -401,7 +401,7 @@ export const profileDetails = [
     location: "Barabanki, Uttar Pradesh",
     instagram: "https://instagram.com/tanashvi_joshi19?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/tanashvi-joshi-528412255",
-    img: "/assets/images/thirdyear/tenashvi.webp",
+    img: "/assets/images/thirdyear/tanashvi.webp",
     post: "Co-Ordinator",
   },
 
@@ -440,7 +440,7 @@ export const profileDetails = [
   location: "Una, Himachal Pradesh",
   instagram: "https://instagram.com/akshit.rxt?igshid=OGQ5ZDc2ODk2ZA==",
   linkedin: "https://www.linkedin.com/in/akshit-saini-905861290",
-  img: "/assets/images/secondyear/AkshitSaini.webp",
+  img: "/assets/images/secondyear/Akshit.webp",
 },
 {
     name: "Amit Singh Bathyal",
@@ -528,7 +528,7 @@ export const profileDetails = [
   location: "Kullu, Himachal Pradesh",
   instagram: "https://instagram.com/siya__._._?igshid=OGQ5ZDc2ODk2ZA==",
   linkedin: "https://www.linkedin.com/in/siya-sood-002307291",
-  img: "/assets/images/secondyear/siyasood.webp",
+  img: "/assets/images/secondyear/siya.webp",
 },
 {
   name: "Sonal Dogra",
@@ -540,6 +540,139 @@ export const profileDetails = [
   linkedin: "https://www.linkedin.com/in/sonal-dogra-bb5555291",
   img: "/assets/images/secondyear/Sonal.webp",
 },
+
+{
+  name: "Yash Sisodia",
+  section: "second",
+  post: "Executive Members",
+  branch: "Electrical Engineering",
+  location: "Bhopal, Madhya Pradesh",
+  instagram: "https://www.instagram.com/yash_sisodia_27?igsh=bmdyZHZzb25sN29s",
+  linkedin: "https://www.linkedin.com/in/yash-sisodia-3747aa28a",
+  img: "assets/images/secondyear/Yash.webp",
+},
+
+{
+  name: "Ayush Arora",
+  section: "second",
+  post: "Executive Members",
+  branch: "Mathematics and Scientific Computing",
+  location: "Prayagraj, Uttar Pradesh",
+  linkedin: "https://www.linkedin.com/in/ayush-arora-9009312a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  img: "assets/images/secondyear/Ayush.webp",
+  instagram: "https://www.instagram.com/ayusharora7_?igsh=MTI3c3Q5ZmZlb3RmYQ==",
+},
+//First year
+
+{ 
+  name: "Member1",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "AbC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member2",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "AbC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+{ 
+  name: "Member3",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+{ 
+  name: "Member4",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member5",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+{ 
+  name: "Member6",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member7",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+{ 
+  name: "Member8",
+  section: "first",
+  post: "Volunteer",
+  linkedin: "/",
+  instagram: "/",
+  img: "/assets/images/firstyear/1.webp",
+  rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+  branch: "ABC",
+  location: "XYZ",
+  about:
+    "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+},
+
+
 
 
   ];

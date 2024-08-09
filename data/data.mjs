@@ -97,7 +97,7 @@ export const data = [
     {
       image: '/assets/images/pahal/DSC_0496.webp',
       event:'pahal',
-      set: 'set',
+      set: 'set1',
       title: "PAHAL",
       desc: "Freshers at registration"
     },
@@ -105,7 +105,7 @@ export const data = [
     {
       image: '/assets/images/prody/DSC01480.webp',
       event:'prody',
-      set: 'set',
+      set: 'set1',
       title: "PRODYOGIKI",
       desc: "A participant's structure at civil wars event at Prodyogiki"
     },
@@ -114,28 +114,28 @@ export const data = [
   {
     image: '/assets/images/prody/DSC01470.webp',
     event:'prody',
-    set: 'set3',
+    set: 'set1',
     title: "PRODYOGIKI",
     desc: "Participants making circuits in Binary-Blitz"
   },
   {
     image: '/assets/images/pahal/DSC_0635.webp',
     event:'pahal',
-    set: 'set3',
+    set: 'set1',
     title: "PAHAL",
     desc: "Registration assistance to freshers"
   },
   {
     image: '/assets/images/pahal/DSC_0656.webp',
     event:'pahal',
-    set: 'set3',
+    set: 'set1',
     title: "PAHAL",
     desc: "Fresher registring at Pahal"
   },
   {
     image: '/assets/images/prarambh/IMG_4211.webp',
     event:'prarambh',
-      set: 'set3',
+      set: 'set1',
       title: "PRARAMBH",
       desc: "Freshers at auditorium"
   },
@@ -143,21 +143,21 @@ export const data = [
   {
     image: '/assets/images/prarambh/IMG_4218.webp',
     event:'prarambh',
-      set: 'set3',
+      set: 'set1',
       title: "PRARAMBH",
       desc: "Freshers solving quiz at Prarambh"
   },
   {
     image: '/assets/images/hult/IMG_1603.webp',
     event:'hult',
-      set: 'set3',
+      set: 'set1',
       title: "HULT PRIZE",
       desc: "Winners of HUlt Prize with the judges"
   },
   {
     image: '/assets/images/hult/IMG_1374.webp',
     event:'hult',
-      set: 'set3',
+      set: 'set1',
       title: "HULT PRIZE",
       desc: "Hult Prize participants watching a pitch"
   },

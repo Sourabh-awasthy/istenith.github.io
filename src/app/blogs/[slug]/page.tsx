@@ -32,6 +32,7 @@ function getPost({slug}: {slug: string}){
 
 export default function Page({ params } :any){
     const props = getPost( params);
+    
 
 
     return (

@@ -1,16 +1,13 @@
 "use client";
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Importing arrow icons
 import { CgArrowLongLeft, CgArrowLongRight } from 'react-icons/cg';
 import WordReveal from '@/components/animations/WordReveal';
 
 const DomainPage = () => {
-  const [domain, setDomain] = useState<{ title: React.ReactNode; description: string; image: string; rotation: string; } | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animateDescription, setAnimateDescription] = useState(false); // State for animation
 
-  // Use useMemo to memoize the domains array
+  // Define domains here
   const domains = useMemo(() => [
     {
       title: <><CgArrowLongLeft className="inline" /> Design <CgArrowLongRight className="inline" /></>,
@@ -36,7 +33,9 @@ const DomainPage = () => {
       image: 'https://i.pinimg.com/564x/96/6f/21/966f212c46f1d4831b82ed2698ce7953.jpg',
       rotation: '-rotate-12'
     }
-  ], []); // Empty dependency array ensures domains is only created once
+  ], []); 
+
+  // Set up an auto-swiping interval
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % domains.length);
@@ -44,14 +43,14 @@ const DomainPage = () => {
 
     return () => clearInterval(interval); // Clear the interval on component unmount
   }, [domains.length]);
-  
+
   const handlers = useSwipeable({
     onSwipedLeft: () => handleSwipe('left'),
     onSwipedRight: () => handleSwipe('right'),
     trackMouse: true
   });
 
-  const handleSwipe = (direction: string) => {
+  const handleSwipe = (direction:any) => {
     if (direction === 'left') {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % domains.length);
     } else if (direction === 'right') {
@@ -59,17 +58,9 @@ const DomainPage = () => {
     }
   };
 
-  const handleDomainClick = (index: number) => {
+  const handleDomainClick = (index:any) => {
     setCurrentIndex(index);
-    setAnimateDescription(false);
-    setTimeout(() => setAnimateDescription(true), 0);
   };
-
-  useEffect(() => {
-    setDomain(domains[currentIndex]);
-    setAnimateDescription(false);
-    setTimeout(() => setAnimateDescription(true), 0);
-  }, [currentIndex, domains]);
 
   const currentDomain = domains[currentIndex];
 
@@ -102,11 +93,10 @@ const DomainPage = () => {
         <div className="mt-8 p-4 rounded-lg text-center">
           <h2 className="text-3xl lg:text-[36px] mb-4 font-actor">{currentDomain.title}</h2>
           <div className="text-2xl text-center font-actor">
-            <WordReveal text={currentDomain.description} animate={animateDescription} />
+            <WordReveal key={currentIndex} text={currentDomain.description} animate={true} />
           </div>
         </div>
       )}
-      
     </div>
   );
 };
