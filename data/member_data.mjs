@@ -255,7 +255,7 @@ export const profileDetails = [
     location: "Haridwar, Uttarakhand",
     instagram: "https://instagram.com/_.adityasharma_._?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/aditya-sharma-82997921b",
-    img: "/assets/images/thirdyear/Aditya.webp",
+    img: "/assets/images/thirdyear/aditya1.webp",
     post: "Co-Ordinator",
   },
   {
