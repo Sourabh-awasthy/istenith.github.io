@@ -97,7 +97,7 @@ const Gallery: React.FC = () => {
                 alt=""
                 className="w-full h-full rounded-xl object-cover group-hover:scale-[1.02] group-hover:brightness-[40%] duration-300"
               />
-              <div className="absolute bottom-0 left-0 p-1 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+              <div className="absolute bottom-0 left-0 p-1 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
                 <div className="font-barlowb md:text-xl text-[14px]">{item.title}</div>
                 <div className="font-actor md:text-lg text-[12px]">{item.desc}</div>
               </div>

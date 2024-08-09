@@ -70,7 +70,7 @@ alt=""
         </div>
       </div>
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full h-screen  bg-[#171616] z-40 md:hidden">
+        <div className="absolute top-16 left-0 w-full h-screen  bg-[#171616] z-50 md:hidden">
           <div className="flex flex-col mx-[40%] space-y-2 pt-2 pb-7">
             {navbarItems.map((item, index) => (
               <Link href={item.link} key={index} className="text-white text-2xl  no-underline hover:text-gray-300" onClick={toggleMenu}>
