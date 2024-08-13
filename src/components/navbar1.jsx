@@ -30,7 +30,7 @@ ISTE
 </div>
      
       </Link>
-      <div className="hidden md:flex items-center font-actor text-1.3xl space-x-12">
+      <div className="hidden md:flex items-center font-actor text-1.3xl  space-x-12">
         {navbarItems.map((item, index) => (
           <Link href={item.link} key={index} className="text-white no-underline hover:text-gray-300">
             {item.title}

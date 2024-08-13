@@ -8,10 +8,11 @@ import Footer from "../../components/footer";
 import { BackgroundBeams } from "@/components/ui/background_beams";
 import Navbar from "@/components/navbar1";
 import Loader from "@/components/loader";  // Import the Loader component
+import {motion,useScroll} from 'framer-motion'
 
 export default function ThreeDCardDemo() {
   const [loading, setLoading] = useState(true);
-
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     // Simulate data fetching or any other asynchronous operation
     const timer = setTimeout(() => {
@@ -28,9 +29,13 @@ export default function ThreeDCardDemo() {
   return (
     <>
       <Navbar />
+      <motion.div
+      style={{ scaleY: scrollYProgress }}
+      className="fixed top-0 right-0 bottom-0 w-2 bg-custom-white origin-top z-50"
+    />
       <BackgroundBeams />
       <div className="overflow-hidden min-h-screen bg-[#171616]">
-        <div className="lg:text-8xl md:text-8xl text-5xl font-barlowb text-white lg:pt-16 lg:mx-20 mx-20 pt-16">
+        <div className="lg:text-7xl md:text-8xl text-5xl font-barlowb text-white lg:pt-16 lg:mx-20 mx-20 pt-16">
           EVENTS
         </div>
         <div className="border-t-2 border-gray-200 md:mx-20 lg:mx-20 mx-4 lg:mt-2"></div>

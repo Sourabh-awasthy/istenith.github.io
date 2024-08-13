@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ApolloClient, InMemoryCache, useQuery, gql, ApolloProvider } from '@apollo/client';
 import Navbar from '@/components/navbar1';
 import Footer from "../../components/footer";
 import Loader from '@/components/loader';
 
+import { motion, useScroll } from "framer-motion";
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql/', 
   cache: new InMemoryCache(),
@@ -44,6 +44,7 @@ const Gallery: React.FC = () => {
     client,
     fetchPolicy: 'cache-first',
   });
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     // Simulate data fetching or any other asynchronous operation
@@ -64,11 +65,17 @@ const Gallery: React.FC = () => {
 
   return (
     <>
+
       <Navbar />
+      <motion.div
+      style={{ scaleY: scrollYProgress }}
+      className="fixed top-0 right-0  bottom-0 w-2 bg-custom-white origin-top z-50"
+    />
       <div className="background-color: #171616; text-white min-h-screen">
-        <div className="font-barlowb sm:text-9xl flex justify-center items-center md:flex-none md:justify-start md:items-start height-155 text-5xl mx-24 mt-16 mb-6 sm:mb-11">
+      <div className="lg:text-7xl md:text-8xl text-5xl font-barlowb text-white lg:pt-16 lg:mx-24 mx-20 pt-16">
           GALLERY
         </div>
+        <div className="border-t-2 border-gray-200 md:mx-20 lg:mx-24 mx-7 lg:mt-2"></div>
         <div className="grid grid-cols-2 sm:grid-cols-8 sm:grid-rows-21 lg:h-[1950px] h-[3200px] mt-8 sm:mx-24 mx-6 gap-3">
           {set1.map((item, i) => (
             <motion.div

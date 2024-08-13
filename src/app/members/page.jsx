@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion ,useScroll} from 'framer-motion';
 import Navbar from '@/components/navbar1';
 import Footer from '../../components/footer';
 import Loader from "../../components/loader"; // Import the loader component
@@ -41,6 +41,7 @@ const Team = () => {
     fetchPolicy: 'cache-first',
   });
 
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     // Simulate data fetching or any other asynchronous operation
     const timer = setTimeout(() => {
@@ -75,6 +76,10 @@ const Team = () => {
   return (
   <>
 <Navbar/>
+<motion.div
+      style={{ scaleY: scrollYProgress }}
+      className="fixed top-0 right-0 bottom-0 w-2 bg-custom-white origin-top z-50"
+    />
     <div className="min-h-screen bg-[#171616]  text-white">
       <div className="bg-[#171616] lg:w-full top-0 z-50">
         <div className="lg:ml-16  mx-auto lg:px-0 pt-20 text-[50px] md:text-6xl font-actor text-center lg:text-start">ISTE NITH</div>

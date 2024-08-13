@@ -5,6 +5,7 @@ import OverflowDropdown from "../../../components/OverflowDropdown"
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Navbar from  "../../../components/navbar1"
 import Footer from "../../../components/footer";
+import {motion,useScroll} from 'framer-motion'
 export async function generateStaticParams(){
 
     const files =fs.readdirSync(path.join('src/blogs'))
@@ -12,6 +13,7 @@ export async function generateStaticParams(){
     const paths = files.map(filename => ({
         slug: filename.replace('.mdx', '')
     }))
+  
 
     return paths
 }
@@ -30,14 +32,18 @@ function getPost({slug}: {slug: string}){
 
 }
 
+
+
 export default function Page({ params } :any){
     const props = getPost( params);
     
+   
 
 
     return (
 <>
 <Navbar/>
+
 <div className="min-h-screen  bg-[#171616]   text-white">
             <div className="flex flex-col lg:flex-row ">
 
