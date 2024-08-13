@@ -10,25 +10,25 @@ const DomainPage = () => {
   // Define domains here
   const domains = useMemo(() => [
     {
-      title: 'DESIGN',
+      title: <><CgArrowLongLeft className="inline" /> Design <CgArrowLongRight className="inline" /></>,
       description: "The design team is the creative force to elevate society's visual, artistic, and aesthetic aspects. The Design team works to develop imaginatively captivating posters, graphics, and event branding.",
       image: 'https://i.pinimg.com/564x/df/ab/86/dfab862519becd6970a10c1369efdcf3.jpg',
       rotation: 'rotate-12'
     },
     {
-      title:  'FINANCE' ,
+      title: <><CgArrowLongLeft className="inline" /> Finance <CgArrowLongRight className="inline" /></>,
       description: "The management of ISTE's financial activities falls within the purview of the Finance domain. It oversees activities such as accounting, financial reporting, and budgeting.",
       image: 'https://i.pinimg.com/564x/68/7c/69/687c6904b364e3c8bf539b7d15a581d4.jpg',
       rotation: 'rotate-1'
     },
     {
-      title:  'PR',
+      title: <><CgArrowLongLeft className="inline" /> PR <CgArrowLongRight className="inline" /></>,
       description: 'The Public Relations domain of ISTE is committed to providing the best possible communication with its members, institutions, and the public.',
       image: 'https://i.pinimg.com/564x/7a/cc/85/7acc8503086b3a2d7448b8be7058292d.jpg',
       rotation: '-rotate-6'
     },
     {
-      title:"TECH" ,
+      title: <><CgArrowLongLeft className="inline" /> TECH <CgArrowLongRight className="inline" /></>,
       description: "Welcome to ISTE's Tech Domain! Serving as the organization's technological backbone, the Tech domain is responsible for delivering essential technical resources and support.",
       image: 'https://i.pinimg.com/564x/96/6f/21/966f212c46f1d4831b82ed2698ce7953.jpg',
       rotation: '-rotate-12'

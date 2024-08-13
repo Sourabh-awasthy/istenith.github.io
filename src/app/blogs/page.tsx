@@ -5,10 +5,11 @@ import Loader from "@/components/loader"; // Import the Loader component
 import { BackgroundBeams } from "@/components/ui/background_beams";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar1";
+import {motion,useScroll} from "framer-motion";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(true);
-
+const {scrollYProgress} =useScroll()
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -24,6 +25,10 @@ export default function Blog() {
   return (
     <>
       <Navbar />
+      <motion.div
+      style={{ scaleY: scrollYProgress }}
+      className="fixed top-0 right-0 bottom-0 w-2 bg-custom-white origin-top z-50"
+    />
       <div className="min-h-screen bg-[#171616]">
         <div className="justify-center flex flex-row pt-16">
           <div className="lg:text-7xl text-6xl font-barlowb text-white">B</div>

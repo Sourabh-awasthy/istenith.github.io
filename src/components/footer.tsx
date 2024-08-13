@@ -12,11 +12,11 @@ const Footer = () => {
             <Image 
               src="/assets/images/util/iste_logo-01-removebg-preview.webp" 
               alt="Website Logo" 
-              width={250} 
+              width={240} 
               height={75} 
             />
           </div>
-          <p className="text-3xl lg:mb-2 mb-0 font-medium">ISTE NITH</p>
+          <p className="text-3xl lg:mb-2 -mt-12 font-medium">ISTE NITH</p>
           <hr className="w-3/4 lg:w-full border-gray-600 my-4 py-4" />
           <div className="flex mb-8 space-x-4 lg:space-x-16">
             <a 

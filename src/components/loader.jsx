@@ -1,10 +1,13 @@
 import React from 'react';
+import "./loader.css"
 
 const Loader = () => {
   return (
-    <div className="flex pt-8 justify-center h-screen">
-      <div className="w-10 h-10 border-8 border-t-8 border-white border-t-black rounded-full animate-spin"></div>
-    </div>
+    <div className='w-full min-h-screen justify-center lg:pt-[20%] lg:px-[47%] pt-40 px-[40%] '>
+<div class="spinner ">
+    <div class="spinner1"></div>
+</div>
+</div>
   );
 };
 

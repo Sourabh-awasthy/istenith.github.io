@@ -440,7 +440,7 @@ export const profileDetails = [
   location: "Una, Himachal Pradesh",
   instagram: "https://instagram.com/akshit.rxt?igshid=OGQ5ZDc2ODk2ZA==",
   linkedin: "https://www.linkedin.com/in/akshit-saini-905861290",
-  img: "/assets/images/secondyear/Akshit.webp",
+  img: "assets/images/secondyear/Akshitsaini.webp",
 },
 {
     name: "Amit Singh Bathyal",
@@ -472,6 +472,16 @@ export const profileDetails = [
   instagram: "https://instagram.com/ashutosh_sadana?igshid=NGVhN2U2NjQ0Yg==",
   linkedin: "https://www.linkedin.com/in/ashutosh-sadana-922722201",
   img: "/assets/images/secondyear/AshutoshK.webp",
+},
+{
+  name: "Ayush Arora",
+  section: "second",
+  post: "Executive Members",
+  branch: "Mathematics and Scientific Computing",
+  location: "Prayagraj, Uttar Pradesh",
+  linkedin: "https://www.linkedin.com/in/ayush-arora-9009312a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  img: "assets/images/secondyear/Ayush.webp",
+  instagram: "https://www.instagram.com/ayusharora7_?igsh=MTI3c3Q5ZmZlb3RmYQ==",
 },
 
 
@@ -517,6 +527,16 @@ export const profileDetails = [
   img: "/assets/images/secondyear/Naman.webp",
 },
 
+{
+  section: "second",
+      name: "Kanishk Singh",
+      branch: "Computer Science and Engineering",
+      location: "Ghaziabad,Uttar Pradesh",
+      instagram: " https://www.instagram.com/tashu_hmmmmm?igsh=cjUybmRycXd6amVo",
+      linkedin: "https://www.linkedin.com/in/kanishk-singh-61734628a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      img: "assets/images/secondyear/kanishk.webp",
+      post: "Executive Members",
+  },
 
 
 
@@ -552,16 +572,10 @@ export const profileDetails = [
   img: "assets/images/secondyear/Yash.webp",
 },
 
-{
-  name: "Ayush Arora",
-  section: "second",
-  post: "Executive Members",
-  branch: "Mathematics and Scientific Computing",
-  location: "Prayagraj, Uttar Pradesh",
-  linkedin: "https://www.linkedin.com/in/ayush-arora-9009312a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  img: "assets/images/secondyear/Ayush.webp",
-  instagram: "https://www.instagram.com/ayusharora7_?igsh=MTI3c3Q5ZmZlb3RmYQ==",
-},
+
+
+
+
 //First year
 
 { 
@@ -671,7 +685,6 @@ export const profileDetails = [
   about:
     "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
 },
-
 
 
 
