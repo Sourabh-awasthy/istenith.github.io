@@ -22,7 +22,7 @@ export const data = [
     desc: "Participants tackling Gear-O-Metry problems"
   },
   {
-    image: '/assets/images/pahal/DSC_0444.webp',
+    image : "/assets/images/hult/DSC_0459.webp",
     event:'pahal',
     set: 'set1',
     title: "PAHAL",
