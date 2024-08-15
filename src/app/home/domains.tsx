@@ -1,8 +1,11 @@
 "use client";
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import { CgArrowLongLeft, CgArrowLongRight } from 'react-icons/cg';
-import WordReveal from '@/components/animations/WordReveal';
+import Lottie from 'lottie-react';
+import animationData from "./tech1.json";
+import animationData2 from "./design.json";
+import animationData3 from "./finance.json";
+import animationData4 from "./pr.json"
 
 const DomainPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,30 +13,30 @@ const DomainPage = () => {
   // Define domains here
   const domains = useMemo(() => [
     {
-      title: <><CgArrowLongLeft className="inline" /> Design <CgArrowLongRight className="inline" /></>,
+      title: 'DESIGN',
       description: "The design team is the creative force to elevate society's visual, artistic, and aesthetic aspects. The Design team works to develop imaginatively captivating posters, graphics, and event branding.",
       image: 'https://i.pinimg.com/564x/df/ab/86/dfab862519becd6970a10c1369efdcf3.jpg',
       rotation: 'rotate-12'
     },
     {
-      title: <><CgArrowLongLeft className="inline" /> Finance <CgArrowLongRight className="inline" /></>,
+      title: 'FINANCE',
       description: "The management of ISTE's financial activities falls within the purview of the Finance domain. It oversees activities such as accounting, financial reporting, and budgeting.",
       image: 'https://i.pinimg.com/564x/68/7c/69/687c6904b364e3c8bf539b7d15a581d4.jpg',
       rotation: 'rotate-1'
     },
     {
-      title: <><CgArrowLongLeft className="inline" /> PR <CgArrowLongRight className="inline" /></>,
+      title: 'PR',
       description: 'The Public Relations domain of ISTE is committed to providing the best possible communication with its members, institutions, and the public.',
       image: 'https://i.pinimg.com/564x/7a/cc/85/7acc8503086b3a2d7448b8be7058292d.jpg',
       rotation: '-rotate-6'
     },
     {
-      title: <><CgArrowLongLeft className="inline" /> TECH <CgArrowLongRight className="inline" /></>,
+      title: 'TECH',
       description: "Welcome to ISTE's Tech Domain! Serving as the organization's technological backbone, the Tech domain is responsible for delivering essential technical resources and support.",
       image: 'https://i.pinimg.com/564x/96/6f/21/966f212c46f1d4831b82ed2698ce7953.jpg',
       rotation: '-rotate-12'
     }
-  ], []); 
+  ], []);
 
   // Set up an auto-swiping interval
   useEffect(() => {
@@ -50,7 +53,7 @@ const DomainPage = () => {
     trackMouse: true
   });
 
-  const handleSwipe = (direction:any) => {
+  const handleSwipe = (direction: 'left' | 'right') => {
     if (direction === 'left') {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % domains.length);
     } else if (direction === 'right') {
@@ -58,46 +61,66 @@ const DomainPage = () => {
     }
   };
 
-  const handleDomainClick = (index:any) => {
+  const handleDomainClick = (index: number) => {
     setCurrentIndex(index);
   };
 
   const currentDomain = domains[currentIndex];
 
+
+
+ 
+
+  
+
   return (
-    <div className="min-h-screen bg-1e1e1e mt-domainpage text-white flex flex-col items-center justify-center p-4 relative">
-      <h1 className="text-4xl mb-8 font-barlowmedium py-16 lg:text-[88px] text-center">DOMAINS</h1>
-      <div className="w-full">
-        <div {...handlers} className="flex h-full space-x-7 overflow-x-auto sm:flex-wrap sm:justify-center lg:flex-nowrap hide-scrollbar swipeable-view">
-          {domains.map((domain, index) => (
-            <div
-              key={index}
-              onClick={() => handleDomainClick(index)}
-              className={`cursor-pointer p-4 bg-cover bg-center transition-transform transform hover:scale-105 ${index === currentIndex ? '' : 'hidden'} mx-auto h-cards w-cards min-w-[80%] sm:min-w-[45%] lg:min-w-[20%] ${domain.rotation} card-${index}`}
-              style={{ backgroundImage: `url(${domain.image})` }}
-            ></div>
-          ))}
+
+<div className=" lg:h-[100rem] md:h-[75rem] h-[160rem] bg-[#171616] lg:-mt-[38%] md:-mt-[80%]  -mt-[140%]  text-white flex flex-col   p-4 ">
+      <h1 className="text-5xl mb-8 font-barlowmedium lg:pt-7  lg:text-[88px] text-center">DOMAINS</h1>
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:ml-[15%] md:ml-[5%] ml-0 lg:pt-7 pt-0 "> 
+        <div className=''>
+
+
+        <div className=' lg:w-116 lg:h-116  md:h-80 md:w-80 w-80 h-80 pt-4'>
+        <Lottie animationData= {animationData}/></div>
+        <div className='font-barlowmedium text-3xl text-center lg:w-96 w-80 -mt-16 md:mt-1 lg:-mt-16 '> TECH</div>
+        <p className=" text-1.2xl lg:p-4  md:px-8 px-[7%] font-actor lg:w-96   pt-4  ">  Welcome to ISTE Tech&#39 Domain! Serving as the organization&#39 technological backbone, the Tech domain is responsible for delivering essential technical resources and support.
+        </p>
         </div>
-        <div className="web-view flex h-full space-x-7 sm:flex-wrap sm:justify-center lg:flex-nowrap hide-scrollbar">
-          {domains.map((domain, index) => (
-            <div
-              key={index}
-              onClick={() => handleDomainClick(index)}
-              className={`cursor-pointer p-4 bg-cover bg-center transition-transform transform hover:scale-105 h-cards w-cards min-w-[80%] sm:min-w-[45%] lg:min-w-[20%] ${domain.rotation} card-${index}`}
-              style={{ backgroundImage: `url(${domain.image})` }}
-            ></div>
-          ))}
+
+          
+        <div>
+        <div className='lg:w-96 lg:h-96 w-80 h-80 lg:pt-0 md:pt-0 pt-16'>
+        <Lottie animationData= {animationData4}/>
+        <div className='font-barlowmedium text-3xl text-center'> PR</div>
+        <p className=" text-1.2xl pt-4 font-actor px-[7%] "> The Public Relations domain of ISTE is committed to providing the best possible communication with its members, institutions, and the public.
+        </p></div>
         </div>
-      </div>
-      {currentDomain && (
-        <div className="mt-8 p-4 rounded-lg text-center">
-          <h2 className="text-3xl lg:text-[36px] mb-4 font-actor">{currentDomain.title}</h2>
-          <div className="text-2xl text-center font-actor">
-            <WordReveal key={currentIndex} text={currentDomain.description} animate={true} />
-          </div>
+
+        <div>
+        <div className='lg:w-96 lg:h-96 lg:pt-20 pt-80  md:pt-20 lg:mt-0 mt-8 w-80 h-80'>
+        <Lottie animationData= {animationData3}/>
+        <div className='font-barlowmedium text-3xl text-center lg:pt-8 pt-7 '> FINANCE</div>
+        <p className=" text-1.2xl pt-4 font-actor px-[7%] ">  The management of ISTE&#39 financial activities falls within the purview of the Finance domain. It oversees activities such as accounting, financial reporting, and budgeting.
+        </p></div>
         </div>
-      )}
-    </div>
+
+
+        <div>
+        <div className='lg:w-96 lg:h-96 w-80 h-80 pt-140 md:pt-0 lg:mt-0 mt-28 lg:pt-20'>
+        <Lottie animationData= {animationData2}/>
+        <div className='font-barlowmedium text-3xl text-center lg:pt-7 md:pt-7'> DESIGN</div>
+        <p className=" text-1.2xl pt-4 px-[7%] font-actor ">  The design team is the creative force to elevate society&#39 visual, artistic, and aesthetic aspects. The Design team works to develop imaginatively captivating posters, graphics, and event branding.
+        </p></div>
+        </div>
+        </div>
+     
+
+
+
+
+</div>
+
   );
 };
 

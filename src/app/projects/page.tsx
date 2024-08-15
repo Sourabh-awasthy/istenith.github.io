@@ -76,7 +76,7 @@ const Projects = () => {
               {topics.map((d: any) => (
                 <motion.div
                   key={d._id}
-                  className="bg-custom-white md:h-[600px] h-[450px] lg:w-[550px] lg:h-[540px] text-black rounded-xl"
+                  className="bg-custom-white md:h-[600px] h-[450px] lg:w-[550px] lg:h-[500px] text-black rounded-xl"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1.3 }}

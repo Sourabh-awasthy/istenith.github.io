@@ -9,11 +9,14 @@ import { BiSolidContact } from "react-icons/bi";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { HiOutlineMailOpen } from "react-icons/hi";        
 import React, { useState } from 'react';
-import DomainPage from '../domainspage/page';
+import DomainPage from './domains';
 import Image from 'next/image'
+import Contactus from './contact';
 
 import Loader from '@/components/loader';
 import { motion, useScroll } from "framer-motion";
+import { ImagesSlider } from '@/components/ui/image-slider';
+import { DirectionAwareHover } from "@/components/ui/direction-aware"
 
 
 import { ContainerScroll } from "../../components/ui/container-scroll";
@@ -35,7 +38,14 @@ const Homepage = () => {
   const [menu, setmenu] = useState(false);
 
 
+  const imageUrl = [
+    "/assets/images/util/Copy of DCS_0632 (1).webp",
+    "/assets/images/aboutus/Hult_12N.webp",
 
+"/assets/images/aboutus/Technex 04.webp",
+
+    
+  ];
  
   const [domain,setdomain] = useState<{ title: string; description: string; } | null>(null);
   const [loading, setLoading] = useState(true);
@@ -54,7 +64,7 @@ const Homepage = () => {
     return <Loader />;
   }
 
-  
+
 
 
 
@@ -62,11 +72,12 @@ return (
 
 
 <>
+
 <motion.div
         style={{ scaleX: scrollYProgress }}
         className="fixed top-0 left-0 right-0 h-2 bg-custom-white origin-left z-50"
       />
-  <div className="h-screen bg-[#171616]  text-white">
+  <div className="lg:h-[320rem]  bg-[#171616]  text-white">
     
   
 <div className='full'>
@@ -89,7 +100,7 @@ return (
       >
 
         <motion.h1
-          className="text-iste font-barlowlight ml-iste lg:mt-0 -mt-12 text-4xl"
+          className="text-iste font-barlowlight lg:-ml-[30%] lg:mt-0 -ml-[40%] -mt-12 text-4xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -97,7 +108,7 @@ return (
           ISTE
         </motion.h1>
         <motion.h1
-          className="text-white/30 font-barlowlight text-iste ml-iste -mt-iste2 "
+          className="text-white/30 font-barlowlight text-iste lg:-ml-[30%] -ml-[40%] -mt-iste2 "
           style={{ clipPath: 'inset(60% 0 0 0)' }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,7 +117,7 @@ return (
           ISTE
         </motion.h1>
         <motion.h1
-          className="text-white/10 font-barlowlight text-iste ml-iste -mt-iste3 "
+          className="text-white/10 font-barlowlight text-iste lg:-ml-[30%] -ml-[40%] -mt-iste3 "
           style={{ clipPath: 'inset(60% 0 0 0)' }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -119,7 +130,7 @@ return (
   <div className="relative">
       {/* Hamburger button for mobile view */}
       <button
-        className="block md:hidden absolute top-4 right-4 p-2 bg-gray-700 rounded-md z-50"
+        className="block lg:hidden absolute top-4 mt-4  right-4 p-2 bg-gray-700 rounded-md z-50"
         onClick={() => setmenu(!menu)}
         aria-label="Toggle menu"
       >
@@ -137,7 +148,7 @@ return (
       {/* Overlay background for mobile menu */}
       {menu && (
         <div
-          className="fixed inset-0 bg-[#171616] z-0"
+          className="fixed inset-0  bg-[#171616] z-0"
           onClick={() => setmenu(false)}
           style={{ pointerEvents: 'none' }} // Prevents the overlay from blocking clicks
         ></div>
@@ -145,9 +156,9 @@ return (
 
       {/* Navigation menu */}
       <nav
-        className={`absolute top-44 right-0 pr-28 text-white md:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
+        className={`absolute top-44 right-0 pr-28 text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
       >
-        <ul className="flex flex-col md:space-y-8 md:flex md:items-center">
+        <ul className="lg:block flex flex-col md:space-y-8 -mt-20  md:flex md:items-center">
           {pagenames.map((item, index) => (
             <motion.li
               key={item.name}
@@ -173,55 +184,85 @@ return (
 
 
 
-<div className="mt-isteimg relative text-white">
-  <div className="relative mt-10">
+<div className="lg:mt-[45rem] md:mt-[47rem] mt-[35rem]  relative text-white">
+  <div className="relative mt-40">
   <div className="flex flex-col overflow-hidden">
   
 
 
 
     </div>
-    <Image
-      src="/assets/images/util/Copy of DCS_0632 (1).webp"
-      alt =""
 
-      width ={200}
-      height={200}
-      quality={100}
-      unoptimized={true}
-      className="  flex opacity-50 lg:mx-auto lg:w-full lg:h-full md:w-full md:h-full h-56 w-96  md:px-0 px-[5%] lg:px-0  "
-    />
+    <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="text-4xl mb-8 font-barlowmedium pt-16 pb-4 lg:text-[88px] text-center"
+              >
+                ABOUT US
+              </motion.div>
+
+<div className='px-[.5%]'>
+   <ImagesSlider className="lg:h-[40rem] border-3 rounded-md h-[20rem] w-full  shadow-neon p-6" images={imageUrl}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: .6,
+        }}
+        className="z-50 flex flex-col justify-center items-center opacity-50 lg:px-0 lg:mx-auto lg:w-full lg:h-full md:w-full md:h-full   md:px-0 px-[5%]  "
+      >
+  
+
+      </motion.div>
+
+    </ImagesSlider>
+    </div>
+
+
+
+
     <div className="absolute inset-0 -mt-12 flex items-center justify-center">
-      <div className="absolute text-3xl text-white/70  font-barlowmedium lg:-mt-96 md:-mt-40 md:text-5xl -mt-56 ml-auto lg:mr-[60%] mr-[50%]   z-10  lg:text-[108px] ">
-        ABOUT US
-      </div>
+
       
     </div>
   </div>
 
-  <div className="flex flex-col items-center justify-center min-h-screen">
-    <div className="relative max-w-2xl lg:-ml-[50%] md:-ml-[50%] bg-aboutus opacity-100 p-4 rounded-lg shadow-lg mt-4 mx-4 sm:mt-aboutcontent sm:ml-aboutcontent sm:w-full sm:left-1/2">
-      <p className="text-xl text-white opacity-100 font-actor text-center sm:text-2xl sm:text-left md:text-2xl lg:text-3xl">
-        The Indian Society for Technical Education (ISTE) is the leading
-        National Professional non-profit making Society for the Technical
-        Education System in our country. The Students Chapter NIT Hamirpur is
-        the representative at NIT Hamirpur to promote such technical culture in
-        our college. We at NITH, conduct various events within the college and
-        also participate in inter-college fests.
-      </p>
-      </div>
+  <motion.div
+                initial={{ opacity: 0, y: 200 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="text-4xl mb-8 font-barlowmedium pt-16 pb-4 lg:text-[88px] text-center"
+              >
+                  <div className="flex flex-col items-center justify-center min-h-screen lg:mt-8 md:-mt-24 mt-8">
+  <div className="lg:mx-[15%] lg:px-8 lg:py-7  mx-[5%] bg-[rgba(255,255,255,0.25)] shadow-custom backdrop-blur-2xl rounded-lg border border-custom mt-4 sm:mt-aboutcontent p-3">
+  <p className="text-white font-actor text-center text-1.5xl sm:text-left md:text-2xl lg:text-3xl ">
+    The Indian Society for Technical Education (ISTE) is the leading
+    National Professional non-profit making Society for the Technical
+    Education System in our country. The Students Chapter NIT Hamirpur is
+    the representative at NIT Hamirpur to promote such technical culture in
+    our college. We at NITH, conduct various events within the college and
+    also participate in inter-college fests.
+  </p>
+</div>
+
 
 <div className="relative mt-64 ml-72 h-80 w-auto">
   <div className="relative inset-grey  opacity-70 z-0 h-96 w-56 right-20 top-20  hidden sm:block "></div> 
   
-  <Image src="/assets/images/util/aboutuspage.webp" 
-  height={200}
-  width ={200}
-  quality={100}
-  unoptimized={true}
-  alt ="" className="relative z-10 h-img2 w-full mt-img2 right-img2 top-6 right-5  hidden sm:block" />
+
 </div>
 </div>
+            
+              </motion.div>
+
+
 </div>
 
 
@@ -229,65 +270,33 @@ return (
 
 
 
+<motion.div
+initial={{ opacity: 0, y: 250 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className=""
+>
 
 
 <DomainPage/>
+ </motion.div>
+ <motion.div
+initial={{ opacity: 0, y: 250 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className=""
+>
 
 
-
-
-
-
-{/* CONTACT PAGEEEEEE*/}
-
-
-
-      <div className="flex flex-col items-center justify-center min-h-screen bg-[#171616]  text-white  -mt-16 lg:mt-0">
-      <h1 className=" text-5xl lg:text-[88px] font-barlowmedium mb-12">CONTACT</h1>
-      <p className=" lg:text-[32px] text-2xl px-10 lg:px-32  text-[#FFFFFF]  mb-0 lg:mb-0 text-center font-actor">
-        Have a question or need assistance? Our team is always ready to help.
-        Feel free to reach out, and we will be delighted to aid you by providing heartfelt support.
-      </p>
-
-
-    </div>
-
-    <footer className='  bg-[#171616] z-50'>
-    <div className=" flex flex-col md:flex-row lg:flex-row w-full justify-between   -mt-28 ">
-    <div className=" flex lg:flex-row  lg:mx-12 mx-[15%] lg:ml-20 items-center">
-      <FaMapLocationDot className="  lg:size-20 size-16 " />
-      <div className='lg:ml-8 ml-8'>
-        <p className="text-1.2xl font-barlow">Address</p>
-        <p className="text-1.2xl font-barlow">NIT, Hamirpur<br />Himachal Pradesh,<br/> India, 177001</p>
-      </div>
-    </div>
-    <div className=" flex lg:flex-row  lg:mx-12 mx-[15%] mt-7 items-center ">
-      <BiSolidContact className=" size-16 lg:size-20  " />
-      <div className=' ml-8 lg:ml-8'>
-        <p className="text-1.2xl font-barlow">Phone</p>
-        <p className="text-1.2xl font-actor">12345578</p>
-      </div>
-    </div>
-    <div className="lg:mr-20 flex lg:flex-row mt-7 lg:mx-12 mx-[15%] items-center">
-      <HiOutlineMailOpen className=" size-16 lg:size-20 " />
-      <div className='lg:ml-8 ml-8  '>
-        <p className="text-1.2xl font-barlow " >Email</p>
-        <p className="text-1.2xl font-barlow ">iste@nith.ac.in</p>
-      </div>
-    </div>
-
-  </div>
-
-  
-  </footer>
-
-
-
- </div> 
- <div className='lg:mt-116 mt-140'>
+<Contactus/>
+ </motion.div>
+ <div className='lg:pt-40 pt-0'></div>
  <Footer/>
-</div>
+              
+ </div> 
 
+
+ 
  </>
 );};
 

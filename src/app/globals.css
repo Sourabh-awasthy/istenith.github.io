@@ -61,8 +61,8 @@ background-color: #171616;
 
 .slick-slide > div {
   margin: 0 15px 0  15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .slick-dots li.slick-active button:before {
@@ -74,8 +74,8 @@ background-color: #171616;
   width: 10px;
   height:10px ;
   color:white;
-  margin-left:30px;
-  margin-right:60px;
+  margin-left:0px;
+  margin-right:20px;
   z-index: 20;
 
 
@@ -170,7 +170,7 @@ margin-bottom: 1rem;
   margin-left: -3rem;
 }
 .text-iste {
-  font-size: 9rem;
+  font-size: 14rem;
 } 
 .-mt-60 {
   margin-top: -11rem;

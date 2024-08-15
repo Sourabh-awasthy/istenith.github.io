@@ -30,7 +30,7 @@ const {scrollYProgress} =useScroll()
       className="fixed top-0 right-0 bottom-0 w-2 bg-custom-white origin-top z-50"
     />
       <div className="min-h-screen bg-[#171616]">
-        <div className="justify-center flex flex-row pt-16">
+        <div className=" justify-center flex flex-row pt-16">
           <div className="lg:text-7xl text-6xl font-barlowb text-white">B</div>
           <div className="lg:text-7xl text-6xl font-barlowb text-white">L</div>
           <div className="text-white font-barlowb lg:text-7xl text-6xl">O</div>

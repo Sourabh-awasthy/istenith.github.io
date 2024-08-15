@@ -121,7 +121,7 @@ export default function ExpandableCardDemo() {
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
-                    className=" mx-[30%] lg:mt-28  rounded-lg px-2  bg-white  hover:bg-white/70"
+                    className=" mx-[30%] lg:mt-28  rounded-lg px-2 bg-white  hover:bg-white/70"
                   >
                  
                        {active.ctatext}
