@@ -130,7 +130,7 @@ return (
   <div className="relative">
       {/* Hamburger button for mobile view */}
       <button
-        className="block lg:hidden absolute top-4 right-4 p-2 bg-gray-700 rounded-md z-50"
+        className="block lg:hidden absolute top-4 mt-4  right-4 p-2 bg-gray-700 rounded-md z-50"
         onClick={() => setmenu(!menu)}
         aria-label="Toggle menu"
       >
@@ -148,7 +148,7 @@ return (
       {/* Overlay background for mobile menu */}
       {menu && (
         <div
-          className="fixed inset-0 bg-[#171616] z-0"
+          className="fixed inset-0  bg-[#171616] z-0"
           onClick={() => setmenu(false)}
           style={{ pointerEvents: 'none' }} // Prevents the overlay from blocking clicks
         ></div>
