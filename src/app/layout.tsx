@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
 
 <body className=  {inter.className} >
-  <main >
+  <main className="bg-[#171616]" >
     
 {children}</main> 
 

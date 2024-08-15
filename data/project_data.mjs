@@ -3,7 +3,7 @@ export const topics = [
         {
             "_id": "66a2cd0a84566f4fd8cecc88",
             "title": "WriteIt",
-            "description": "It will write any assignment in any handwriting.You simply have to click photos of your handwriting. It will make a personalized Notebook in which he will recognized how you have written words and write the assignment in the described handwriting.Not only notes it can be used to make drawings and anything you want.It is a software + hardware-based.",
+            "description": "It will write any assignment in any handwriting.You simply have to click photos of your handwriting. It will make a personalized Notebook in which he will recognized how you have written words and write the assignment in the described handwriting.Not only...",
             "createdAt": "2024-07-25T22:09:14.929Z",
             "updatedAt": "2024-07-25T22:09:14.929Z",
             "__v": 0,
@@ -13,7 +13,7 @@ export const topics = [
         {
             "_id": "66a2cd4584566f4fd8cecc8f",
             "title": "UI/UX  ",
-            "description": "We will be designing various fronend with proper technical terms of user experience and also with the involved philosophy behind a particular action. Inspiration will be taken from great design of websites such as on Awwards website. An example - Creating a website dedicated to the latest research and discoveries in astrobiology and exoplanet exploration can serve as a valuable resource for enthusiasts, students, and researchers",
+            "description": "We will be designing various fronend with proper technical terms of user experience and also with the involved philosophy behind a particular action. Inspiration will be taken from great design of websites such as on Awwards website. An example - Creating...",
             "createdAt": "2024-07-25T22:10:13.564Z",
             "updatedAt": "2024-07-25T22:10:13.564Z",
             "__v": 0,
@@ -64,7 +64,7 @@ export const topics = [
         {
             "_id": "66a2ce7e84566f4fd8ceccab",
             "title": "TeenyTiny",
-            "description": "It will create a platform for small gigs like on click things, like best thumbnail for a youtube video. The task provider will set an amount of money for the job, which will be equally distributed equally automatically among all the participants of the gig. It will serve as an opportunity to learn about various tech stacks. ",
+            "description": "It will create a platform for small gigs like on click things, like best thumbnail for a youtube video. The task provider will set an amount of money for the job, which will be equally distributed equally automatically among all the participants of the gig... ",
             "createdAt": "2024-07-25T22:15:26.871Z",
             "updatedAt": "2024-07-25T22:15:26.871Z",
             "__v": 0,

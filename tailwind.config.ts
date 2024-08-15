@@ -41,6 +41,8 @@ const config: Config = {
         'custom-grayt': '#575757',
         'white-48': 'rgba(255, 255, 255, 0.48)',
         'white-60': 'rgba(255, 255, 255, 0.60)',
+        'custom-bg': 'rgba(255, 255, 255, 0.25)',
+        'custom-border': 'rgba(255, 255, 255, 0.18)',
         'custom-grayblog': {
           DEFAULT: '#575757',
           53: 'rgba(87, 87, 87, 0.53)',
@@ -67,6 +69,19 @@ const config: Config = {
         '128': '32rem',
         '140': '35rem',
         '116': "28rem"
+      },
+   
+      boxShadow: {
+        'custom': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+          'custom1': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+          'neon': '0 0 14px rgba(255,255,255,.5), 0 0 20px rgba(255, 255, 255, .5)',
+
+      },
+      backdropBlur: {
+        'custom': '4px',
+      },
+      borderRadius: {
+        'custom': '10px',
       },
       letterSpacing: {
         'expanded': '0em',

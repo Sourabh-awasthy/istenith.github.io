@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaInstagram, FaLinkedin, FaGithub} from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -48,8 +49,12 @@ const Footer = () => {
         <div className="flex justify-between items-center text-sm text-gray-400">
           <p className="hidden sm:block">© 2024 All Rights Reserved</p>
           <p className="block sm:hidden text-center">© 2024 All Rights Reserved</p>
-          <span className="hidden sm:block hover:underline cursor-pointer">Contact Us</span>
-          <span className="block sm:hidden text-center hover:underline cursor-pointer">Contact Us</span>
+
+          <Link href="mailto:iste@nith.ac.in" className="hidden sm:block hover:underline cursor-pointer">
+      Contact Us
+   
+
+          </Link>
         </div>
       </div>
 
