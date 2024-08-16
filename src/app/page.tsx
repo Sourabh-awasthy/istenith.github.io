@@ -62,7 +62,7 @@ export default function ShootingStarsAndStarsBackgroundDemo() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="lg:mx-[20%] mx-[10%]"
+            className="flex justify-center mx-[10%]"
           >
             <Image
               src="/assets/images/util/iste_logo-01-removebg-preview.webp"
@@ -75,7 +75,7 @@ export default function ShootingStarsAndStarsBackgroundDemo() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="lg:-mt-32 -mt-[20%] lg:text-9xl md:text-7xl text-6xl mx-[8%] lg:mx-0 md:mx-0 font-barlowmedium"
+            className="lg:-mt-32 -mt-[20%] lg:text-9xl md:text-7xl text-6xl flex justify-center font-barlowmedium"
           >
             ISTE NITH
           </motion.div>
@@ -97,7 +97,7 @@ export default function ShootingStarsAndStarsBackgroundDemo() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="lg:mx-[46%] mx-[33%] lg:-mt-32 md:-mt-24 -mt-[40%] md:mx-[46%] h-40 w-40"
+        className=" lg:-mt-32 md:-mt-24 -mt-[40%] flex justify-center "
       >
 
 <Link href="/home" className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group">

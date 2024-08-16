@@ -40,9 +40,11 @@ const Homepage = () => {
 
   const imageUrl = [
     "/assets/images/util/Copy of DCS_0632 (1).webp",
+
     "/assets/images/aboutus/Hult_12N.webp",
 
 "/assets/images/aboutus/Technex 04.webp",
+
 
     
   ];
@@ -184,7 +186,7 @@ return (
 
 
 
-<div className="lg:mt-[45rem] md:mt-[47rem] mt-[35rem]  relative text-white">
+<div className="lg:mt-[45rem] md:mt-[47rem] mt-[40rem]  relative text-white">
   <div className="relative mt-40">
   <div className="flex flex-col overflow-hidden">
   

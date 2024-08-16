@@ -6,6 +6,7 @@ import animationData from "./tech1.json";
 import animationData2 from "./design.json";
 import animationData3 from "./finance.json";
 import animationData4 from "./pr.json"
+import { DivEvent } from '@tsparticles/engine';
 
 const DomainPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +45,7 @@ const DomainPage = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % domains.length);
     }, 5000); // Change the interval time (5000ms = 5 seconds) as needed
 
-    return () => clearInterval(interval); // Clear the interval on component unmount
+    return () => clearInterval(interval); 
   }, [domains.length]);
 
   const handlers = useSwipeable({
@@ -75,42 +76,42 @@ const DomainPage = () => {
 
   return (
 
-<div className=" lg:h-[100rem] md:h-[75rem] h-[160rem] bg-[#171616] lg:-mt-[38%] md:-mt-[80%]  -mt-[140%]  text-white flex flex-col   p-4 ">
+<div className=" lg:h-[98rem] md:h-[65rem] h-[130rem] bg-[#171616] lg:-mt-[38%] md:-mt-[80%]  -mt-[140%]  text-white flex flex-col   p-4 ">
       <h1 className="text-5xl mb-8 font-barlowmedium lg:pt-7  lg:text-[88px] text-center">DOMAINS</h1>
-      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:ml-[15%] md:ml-[5%] ml-0 lg:pt-7 pt-0 "> 
-        <div className=''>
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:ml-[15%] md:ml-[5%] ml-0 lg:pt-7 pt-4 "> 
+        <div className='w-[74%] lg:w-116 lg:h-116 lg:mx-0  pt-4    flex mx-[13%] flex-col '>
 
 
-        <div className=' lg:w-116 lg:h-116  md:h-80 md:w-80 w-80 h-80 pt-4'>
+        <div className='  pt-4'>
         <Lottie animationData= {animationData}/></div>
-        <div className='font-barlowmedium text-3xl text-center lg:w-96 w-80 -mt-16 md:mt-1 lg:-mt-16 '> TECH</div>
-        <p className=" text-1.2xl lg:p-4  md:px-8 px-[7%] font-actor lg:w-96   pt-4  ">  Welcome to ISTE Tech&#39 Domain! Serving as the organization&#39 technological backbone, the Tech domain is responsible for delivering essential technical resources and support.
+        <div className='font-barlowmedium lg:text-3xl text-2xl text-center mt-2  md:mt-16 lg:mt-12 '> TECH</div>
+        <p className=" text-1xl  lg:text-1.2xl md:px-8  font-actor   rounded-2xl  lg:mx-[7%] pt-4  ">  Welcome to ISTE Tech Domain! Serving as the organization technological backbone, the Tech domain is responsible for delivering essential technical resources and support.
         </p>
         </div>
 
           
-        <div>
-        <div className='lg:w-96 lg:h-96 w-80 h-80 lg:pt-0 md:pt-0 pt-16'>
+        <div className='w-[74%] lg:w-96 lg:h-96 lg:mx-0  flex mx-[13%] flex-col '>
+        <div className=' lg:pt-0 md:pt-0 pt-16'>
         <Lottie animationData= {animationData4}/>
-        <div className='font-barlowmedium text-3xl text-center'> PR</div>
-        <p className=" text-1.2xl pt-4 font-actor px-[7%] "> The Public Relations domain of ISTE is committed to providing the best possible communication with its members, institutions, and the public.
-        </p></div>
+        <div className='font-barlowmedium text-2xl mt-2 lg:text-3xl text-center lg:mt-0'> PR</div>
+        <div className=" text-1xl lg:text-1.2xl pt-4 font-actor lg:mx-[8%] md:mx-[10%]"> The Public Relations domain of ISTE is committed to providing the best possible communication with its members, institutions, and the public.
+        </div></div>
         </div>
 
-        <div>
-        <div className='lg:w-96 lg:h-96 lg:pt-20 pt-80  md:pt-20 lg:mt-0 mt-8 w-80 h-80'>
+        <div className='w-[74%]  lg:w-96 lg:h-96 lg:mx-0 flex mx-[13%] lg:pt-32 pt-0 flex-col'>
+        <div className='lg:pt-20 pt-12  md:pt-20 lg:mt-0 mt-8 '>
         <Lottie animationData= {animationData3}/>
-        <div className='font-barlowmedium text-3xl text-center lg:pt-8 pt-7 '> FINANCE</div>
-        <p className=" text-1.2xl pt-4 font-actor px-[7%] ">  The management of ISTE&#39 financial activities falls within the purview of the Finance domain. It oversees activities such as accounting, financial reporting, and budgeting.
+        <div className='font-barlowmedium text-2xl lg:text-3xl text-center lg:pt-8 pt-7  '> FINANCE</div>
+        <p className=" text-1xl  lg:text-1.2xl pt-4 font-actor lg:mx-[7%] ">  The management of ISTE financial activities falls within the purview of the Finance domain. It oversees activities such as accounting, financial reporting, and budgeting.
         </p></div>
         </div>
 
 
-        <div>
-        <div className='lg:w-96 lg:h-96 w-80 h-80 pt-140 md:pt-0 lg:mt-0 mt-28 lg:pt-20'>
+        <div className='w-[74%] lg:w-96 lg:h-96 lg:mx-0 flex mx-[13%] flex-col md:pt-28 lg:pt-32 pt-0'>
+        <div className=' pt-20 md:pt-0 lg:mt-0 lg:pt-20'>
         <Lottie animationData= {animationData2}/>
-        <div className='font-barlowmedium text-3xl text-center lg:pt-7 md:pt-7'> DESIGN</div>
-        <p className=" text-1.2xl pt-4 px-[7%] font-actor ">  The design team is the creative force to elevate society&#39 visual, artistic, and aesthetic aspects. The Design team works to develop imaginatively captivating posters, graphics, and event branding.
+        <div className='font-barlowmedium text-2xl text-center lg:text-3xl lg:pt-7 md:pt-7'> DESIGN</div>
+        <p className=" text-1xl pt-4  lg:text-1.2xl font-actor lg:mx-[7%]">  The design team is the creative force to elevate society visual, artistic, and aesthetic aspects. The Design team works to develop imaginatively captivating posters, graphics, and event branding.
         </p></div>
         </div>
         </div>
