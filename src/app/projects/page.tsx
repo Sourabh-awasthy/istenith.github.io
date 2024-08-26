@@ -65,7 +65,7 @@ const Projects = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowImage(true); // Show image after 2 seconds
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
   }, []);
