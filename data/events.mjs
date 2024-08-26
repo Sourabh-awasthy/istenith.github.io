@@ -8,7 +8,7 @@ export const Content = [
     sem:"Even Semester",
     description:
 
-      " The Hult Prize is an international competition that challenges university students to create innovative solutions for global issues. Founded by Ahmad Ashkar and funded by Bertil Hult, it awards $1 million in seed capital to the winning team to launch a social enterprise. Partnered with Hult International Business School and the United Nations Foundation, it&apos;s called the &quot;Nobel Prize for students&quot; by Nobel laureate Muhammad Yunus. At ISTE NITH, we proudly host and conduct the on-campus round of the Hult Prize.",
+      " The Hult Prize is an international competition that challenges university students to create innovative solutions for global issues. Founded by Ahmad Ashkar and funded by Bertil Hult, it awards $1 million in seed capital to the winning team to launch a social enterprise. Partnered with Hult International Business School and the United Nations Foundation, it called the Nobel Prize for students&quot; by Nobel laureate Muhammad Yunus. At ISTE NITH, we proudly host and conduct the on-campus round of the Hult Prize.",
 
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
@@ -34,7 +34,7 @@ export const Content = [
   {
     title: "Pahal",
     image:"/assets/images/pahal/DSC_0498.webp",
-    last:"Last held in Aug 202",
+    last:"Last held in Aug 2024",
     sem:"Odd Semester",
 
     description:

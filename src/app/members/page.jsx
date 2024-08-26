@@ -9,7 +9,7 @@ import { motion ,useScroll} from 'framer-motion';
 import Navbar from '@/components/navbar1';
 import Footer from '../../components/footer';
 import Loader from "../../components/loader"; // Import the loader component
-
+import SkeletonLoader from "../../components/skeltonloader";
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql/',
   cache: new InMemoryCache(),
@@ -33,7 +33,9 @@ const GET_MEMBERS = gql`
 `;
 
 const Team = () => {
+  
   const [initialYear, setYear] = useState("final");
+  const [showImage, setShowImage] = useState(false);
   const [isLoading, setIsLoading] = useState(true); // Renamed this loading state to avoid conflict
 
   const { loading, error, data } = useQuery(GET_MEMBERS, {
@@ -50,6 +52,20 @@ const Team = () => {
 
     return () => clearTimeout(timer); // Cleanup the timer on unmount
   }, []);
+
+    // Handle the image loader (appears until image is loaded or 2 seconds pass)
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowImage(true); // Show image after 2 seconds
+      }, 5000);
+  
+      return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
+    }, []);
+  
+    const handleImageLoad = () => {
+      setLoading(false); // Image is fully loaded
+      setShowImage(true); // Show the image
+    };
 
   if (isLoading || loading) { // Check both loading states
     return <Loader />;
@@ -80,6 +96,10 @@ const Team = () => {
       style={{ scaleY: scrollYProgress }}
       className="fixed top-0 right-0 bottom-0 w-2 bg-custom-white origin-top z-50"
     />
+
+
+
+
     <div className="min-h-screen bg-[#171616]  text-white">
       <div className="bg-[#171616] lg:w-full top-0 z-50">
         <div className="lg:ml-16  mx-auto lg:px-0 pt-20 text-[50px] md:text-6xl font-actor text-center lg:text-start">ISTE NITH</div>
@@ -97,16 +117,24 @@ const Team = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <div className="relative group">
-                <Image
-                  src={details.img}
-                  alt={details.name}
-                  width={256}
-                  height={256}
-                  quality={100}
-                  unoptimized={true}
 
-                  className="h-64 w-64 border-4 border-white rounded-lg shadow-md transition-transform transform group-hover:scale-105 hover:shadow-xl  duration-300 mx-auto"
-                />
+
+              {!showImage ? (
+                        <SkeletonLoader />
+                      ) : (
+                        <Image
+                        src={details.img}
+                        alt={details.name}
+                        width={256}
+                        height={256}
+                        quality={100}
+                        unoptimized={true}
+      
+                        className="h-64 w-64 border-4 border-white rounded-lg shadow-md transition-transform transform group-hover:scale-105 hover:shadow-xl  duration-300 mx-auto"
+                      />
+                      )}
+                   
+
                 <div className="lg:absolute lg:bottom-2 md:right-32 lg:right-4 absolute bottom-2 ml-52 bg-[#1E1E1E] flex text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                   {details.instagram && (
                     <Link href={details.instagram} target="_blank" className="flex items-center justify-center ml-2 h-8 w-8">
@@ -165,6 +193,8 @@ const Team = () => {
       </div>
 
     </div>
+
+
     <Footer/>
 
     </>

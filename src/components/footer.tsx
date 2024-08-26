@@ -50,7 +50,7 @@ const Footer = () => {
           <p className="hidden sm:block">© 2024 All Rights Reserved</p>
           <p className="block sm:hidden text-center">© 2024 All Rights Reserved</p>
 
-          <Link href="mailto:iste@nith.ac.in" className="hidden sm:block hover:underline cursor-pointer">
+          <Link href="mailto:iste@nith.ac.in" className=" mr-4 lg:mr-0 hover:underline cursor-pointer">
       Contact Us
    
 

@@ -55,6 +55,8 @@ const Gallery: React.FC = () => {
     return () => clearTimeout(timer); // Cleanup the timer on unmount
   }, []);
 
+  
+
   if (isLoading || graphqlLoading) { // Check both loading states
     return <Loader />;
   }

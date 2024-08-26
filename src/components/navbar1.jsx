@@ -71,25 +71,25 @@ alt=""
       </div>
       {isOpen && (
         <div className="absolute top-16 left-0 w-full h-screen  bg-[#171616] z-50 md:hidden">
-          <div className="flex flex-col mx-[40%] space-y-2 pt-2 pb-7">
+          <div className="flex flex-col mx-[40%] space-y-2 pt-16 ">
             {navbarItems.map((item, index) => (
-              <Link href={item.link} key={index} className="text-white text-2xl  no-underline hover:text-gray-300" onClick={toggleMenu}>
+              <Link href={item.link} key={index} className="text-white text-2xl   no-underline hover:text-gray-300" onClick={toggleMenu}>
                 {item.title}
               </Link>
               
             ))}
           </div>
-          <div className="container mx-auto px-4 py-8 sm:px-8 md:px-16 lg:px-32">
-        <div className="flex flex-col items-center -mt-16">
+          <div className="container mx-auto px-4 pt-6 sm:px-8 md:px-16 lg:px-32">
+        <div className="flex flex-col items-center mt-16">
           <div className="mb-footer">
             <Image 
               src="/assets/images/util/iste_logo-01-removebg-preview.webp" 
               alt="Website Logo" 
-              width={250} 
-              height={75} 
+              width={150} 
+              height={80} 
             />
           </div>
-          <p className="text-3xl lg:mb-2 mb-0 font-barlowb text-white">ISTE NITH</p>
+          <p className="text-3xl lg:mb-2 mb-0 mt-6 font-barlowb text-white">ISTE NITH</p>
           <hr className="w-3/4 lg:w-full border-white my-4 py-4" />
 
         </div>
