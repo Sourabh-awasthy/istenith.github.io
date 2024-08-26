@@ -82,7 +82,7 @@ return (
   <div className="lg:h-[320rem]  bg-[#171616]  text-white">
     
   
-<div className='full'>
+<div className='full pt-3  lg:pt-0'>
 
 <Image src="/assets/images/util/iste_logo-01-removebg-preview.webp" 
   height={200}
@@ -129,23 +129,23 @@ return (
         </motion.h1>
       </motion.div>
     </div>
-  <div className="relative">
+  <div className="relative bg-black">
       {/* Hamburger button for mobile view */}
       <button
-        className="block lg:hidden absolute top-4 mt-4  right-4 p-2 bg-gray-700 rounded-md z-50"
-        onClick={() => setmenu(!menu)}
-        aria-label="Toggle menu"
-      >
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+  className="fixed lg:hidden top-10  right-8 p-1  bg-gray-700 rounded-md z-50"
+  onClick={() => setmenu(!menu)}
+  aria-label="Toggle menu"
+>
+  <svg
+    className="w-6 h-6 text-white"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+</button>
 
       {/* Overlay background for mobile menu */}
       {menu && (
@@ -158,7 +158,7 @@ return (
 
       {/* Navigation menu */}
       <nav
-        className={`absolute top-44 right-0 pr-28 text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
+        className={`absolute lg:top-44  top-20 right-20  text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
       >
         <ul className="lg:block flex flex-col md:space-y-8 -mt-20  md:flex md:items-center">
           {pagenames.map((item, index) => (
@@ -170,7 +170,7 @@ return (
               transition={{ duration: 1, delay: index * 0.1 }}
             >
               <Link href={item.href}>
-                <div className="text-white/60 font-actor hover:text-white transition-transform duration-300 group-hover:-translate-y-1.5 mr-4 cursor-pointer">
+                <div className="text-white/60 space-x-5 font-actor hover:text-white transition-transform duration-300 group-hover:-translate-y-1.5 mr-4 cursor-pointer">
                   {item.name}
                 </div>
               </Link>
@@ -186,7 +186,7 @@ return (
 
 
 
-<div className="lg:mt-[45rem] md:mt-[47rem] mt-[40rem]  relative text-white">
+<div className="lg:mt-[45rem] md:mt-[47rem] mt-[35rem]  relative text-white">
   <div className="relative mt-40">
   <div className="flex flex-col overflow-hidden">
   
@@ -273,9 +273,9 @@ return (
 
 
 <motion.div
-initial={{ opacity: 0, y: 250 }}
+initial={{ opacity: 0, y: 200 }}
 whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 1 }}
+transition={{ duration: .2 }}
 className=""
 >
 
@@ -283,9 +283,9 @@ className=""
 <DomainPage/>
  </motion.div>
  <motion.div
-initial={{ opacity: 0, y: 250 }}
-whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 1 }}
+initial={{ opacity: 0, y: 180 }}
+whileInView={{ opacity: 1, y: -50 }}
+transition={{ duration: .2 }}
 className=""
 >
 

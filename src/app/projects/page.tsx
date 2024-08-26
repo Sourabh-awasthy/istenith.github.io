@@ -44,6 +44,7 @@ const settings = {
   ],
 };
 
+
 const Projects = () => {
 
   const [loading, setLoading] = useState(true);
@@ -56,6 +57,10 @@ const Projects = () => {
 
     return () => clearTimeout(timer); // Cleanup the timer on unmount
   }, []);
+
+
+
+
 
   if (loading) {
     return <Loader />;
@@ -87,6 +92,7 @@ const Projects = () => {
                     </p>
 
                     <div className="h-48 w-80 transition-transform duration-500 ease-in-out my-4 hover:scale-105">
+
                     <Image
                 quality={100}
                 unoptimized={true}
