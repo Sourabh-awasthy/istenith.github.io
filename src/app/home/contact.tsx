@@ -30,7 +30,7 @@ export default function contact (){
         <div className="lg:h-20 lg:w-20 md:h-28 md:w-28 h-20 w-20"> <Lottie animationData= {animationmap}/></div>
       <div className='lg:ml-8 ml-8 md:ml-20'>
         <p className="text-1xl lg:text-1.5xl md:text-1.5xl  font-barlow">Address</p>
-        <p className="text-1xl   lg:text-1.5xl md:text-1.5xl font-barlow">NIT, Hamirpur<br />Himachal Pradesh,<br/> India, 177001</p>
+        <p className="text-1xl   lg:text-1.5xl md:text-1.5xl font-barlow">NIT, Hamirpur<br />Himachal Pradesh,<br/> India, 177005</p>
       </div>
     </div>
     <div className=" flex lg:flex-row  lg:mx-12 mx-[20%] md:mt-12 lg:mt-0 mt-7 md:mx-[24%] items-center ">

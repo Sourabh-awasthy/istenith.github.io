@@ -22,7 +22,11 @@ export const ImagesSlider = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
+
+
+
 
   const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) =>

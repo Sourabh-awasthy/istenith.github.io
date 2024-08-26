@@ -18,6 +18,8 @@ const {scrollYProgress} =useScroll()
     return () => clearTimeout(timer); // Clean up the timer on component unmount
   }, []);
 
+  
+
   if (isLoading) {
     return <Loader />; // Show the loader while loading
   }

@@ -158,9 +158,9 @@ return (
 
       {/* Navigation menu */}
       <nav
-        className={`absolute lg:top-44  top-20 right-20  text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
+        className={`absolute lg:top-44  top-20 lg:right-20 right-auto mx-[30%] lg:mx-0  text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
       >
-        <ul className="lg:block flex flex-col md:space-y-8 -mt-20  md:flex md:items-center">
+        <ul className="lg:block flex flex-col md:space-y-8 space-y-4 -mt-20  md:flex md:items-center">
           {pagenames.map((item, index) => (
             <motion.li
               key={item.name}

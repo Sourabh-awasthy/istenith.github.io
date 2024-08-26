@@ -8,10 +8,12 @@ import Footer from "../../components/footer";
 import { BackgroundBeams } from "@/components/ui/background_beams";
 import Navbar from "@/components/navbar1";
 import Loader from "@/components/loader";  // Import the Loader component
-import {motion,useScroll} from 'framer-motion'
+import {motion,useScroll} from 'framer-motion';
+import SkeletonLoader from "../../components/skeltonloader";
 
 export default function ThreeDCardDemo() {
   const [loading, setLoading] = useState(true);
+  const [showImage, setShowImage] = useState(false);
   const { scrollYProgress } = useScroll();
   useEffect(() => {
     // Simulate data fetching or any other asynchronous operation
@@ -21,6 +23,19 @@ export default function ThreeDCardDemo() {
 
     return () => clearTimeout(timer); // Cleanup the timer on unmount
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowImage(true); // Show image after 2 seconds
+    }, 4000);
+
+    return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
+  }, []);
+
+  const handleImageLoad = () => {
+    setLoading(false); // Image is fully loaded
+    setShowImage(true); // Show the image
+  };
 
   if (loading) {
     return <Loader />;
@@ -54,13 +69,18 @@ export default function ThreeDCardDemo() {
                 </CardItem>
 
                 <CardItem translateZ="100" className="w-full mt-4">
-                  <Image
-                    src={item.image}
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
+                {!showImage ? (
+                        <SkeletonLoader />
+                      ) : (
+                        <Image
+                        src={item.image}
+                        height="1000"
+                        width="1000"
+                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                        alt="thumbnail"
+                      />
+                      )}
+
                 </CardItem>
                 <CardItem
                   as="p"
