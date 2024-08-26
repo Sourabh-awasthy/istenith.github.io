@@ -13,7 +13,7 @@ import Image from "next/image";
 import SkeletonLoader from "../../components/skeltonloader";
 import Loader from "@/components/loader";
 
-// Custom arrows for the slider
+
 const CustomPrevArrow: React.FC<any> = (props) => (
   <div onClick={props.onClick} className="slick-prev">
     Previous
@@ -61,21 +61,21 @@ const Projects = () => {
 
 
 
-  // Handle the image loader (appears until image is loaded or 2 seconds pass)
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowImage(true); // Show image after 2 seconds
+      setShowImage(true);
     }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
+    return () => clearTimeout(timer); 
   }, []);
 
   const handleImageLoad = () => {
-    setLoading(false); // Image is fully loaded
-    setShowImage(true); // Show the image
+    setLoading(false); 
+    setShowImage(true); 
   };
 
-  // Show main loader during page load or image load
+
   if (isLoading) {
     return <Loader />;
   }

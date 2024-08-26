@@ -17,9 +17,83 @@ import Loader from '@/components/loader';
 import { motion, useScroll } from "framer-motion";
 import { ImagesSlider } from '@/components/ui/image-slider';
 import { DirectionAwareHover } from "@/components/ui/direction-aware"
+import navbarItems from "../../components/navbaritems";
 
 
 import { ContainerScroll } from "../../components/ui/container-scroll";
+
+
+
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <nav className="fixed w-full lg:hidden top-0 left-0 h-16 flex justify-between items-center p-4 bg-[#171616] z-50">
+      <Link href="/" className="flex items-center text-white no-underline hover:text-gray-300">
+        <div className="mt-4">
+          <Image
+            src="/assets/images/util/iste_logo-01-removebg-preview.webp"
+            width={60}
+            height={40}
+            alt="ISTE Logo"
+          />
+        </div>
+        <div className="font-barlowb text-3xl -ml-2">ISTE</div>
+      </Link>
+
+      {/* Regular navbar items (hidden on mobile) */}
+      <div className="hidden md:flex items-center font-actor text-1.3xl space-x-12">
+        {navbarItems.map((item, index) => (
+          <Link href={item.link} key={index} className="text-white no-underline hover:text-gray-300">
+            {item.title}
+          </Link>
+        ))}
+      </div>
+
+      {/* Hamburger menu (visible on mobile) */}
+      <div
+        className={`md:hidden flex flex-col justify-center items-center cursor-pointer transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div
+          className={`bg-white h-0.5 w-6 transition-transform duration-300 mb-1 ${isOpen ? "translate-y-1 rotate-30" : ""}`}
+        />
+        <div
+          className={`bg-white h-0.5 w-6 transition-transform duration-300 mb-1 ${isOpen ? "opacity-0" : ""}`}
+        />
+        <div
+          className={`bg-white h-0.5 w-6 transition-transform duration-300 ${isOpen ? "-translate-y-2 -rotate-90" : ""}`}
+        />
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="absolute top-16 left-0 w-full h-screen bg-[#171616] z-50 md:hidden">
+          <div className="flex flex-col px-[37%] space-y-2 pt-16">
+            {navbarItems.map((item, index) => (
+              <Link href={item.link} key={index} className="text-white text-2xl no-underline hover:text-gray-300" onClick={toggleMenu}>
+                {item.title}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-col items-center mt-16">
+            <Image
+              src="/assets/images/util/iste_logo-01-removebg-preview.webp"
+              alt="Website Logo"
+              width={150}
+              height={80}
+            />
+            <p className="text-3xl lg:mb-2 mb-0 -mt-12 font-barlowb text-white">ISTE NITH</p>
+            <hr className="w-3/4 lg:w-full border-white my-4 py-4" />
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
 
 
 
@@ -89,8 +163,8 @@ return (
   width ={200}
   quality={100}
   unoptimized={true}
-  className=" -left-1 logo-44 relative w-20 h-auto z-50 text-white/70" alt="ISTE Logo" / >
-  <span className="text-[#ffffff] font-actor ml-nith text-7xl">NITH</span>
+  className=" -left-1 logo-44 relative hidden lg:block md:block w-20 h-auto z-50 text-white/70" alt="ISTE Logo" / >
+  <div className="text-[#ffffff] font-actor lg:pt-0 md:pt-0 pt-28 ml-nith text-7xl">NITH</div>
 
   <div className="flex flex-col items-center justify-center absolute top-iste left-1/4">
 
@@ -130,22 +204,10 @@ return (
       </motion.div>
     </div>
   <div className="relative bg-black">
-      {/* Hamburger button for mobile view */}
-      <button
-  className="fixed lg:hidden top-10  right-8 p-1  bg-gray-700 rounded-md z-50"
-  onClick={() => setmenu(!menu)}
-  aria-label="Toggle menu"
->
-  <svg
-    className="w-6 h-6 text-white"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-  </svg>
-</button>
+      {/* Hamburger butt
+      on for mobile view */}
+      <Navbar/>
+  
 
       {/* Overlay background for mobile menu */}
       {menu && (
@@ -158,9 +220,9 @@ return (
 
       {/* Navigation menu */}
       <nav
-        className={`absolute lg:top-44  top-20 lg:right-20 right-auto mx-[30%] lg:mx-0  text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
+        className={`absolute lg:top-44 h-100vh top-20 lg:right-20 right-auto mx-[30%] lg:mx-0  text-white lg:flex md:space-y-4 ${menu ? 'block bg-1e1e1e p-4' : 'hidden'}`}
       >
-        <ul className="lg:block flex flex-col md:space-y-8 space-y-4 -mt-20  md:flex md:items-center">
+        <ul className="lg:block flex flex-col md:space-y-8 spa -mt-20  md:flex md:items-center">
           {pagenames.map((item, index) => (
             <motion.li
               key={item.name}
