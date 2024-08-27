@@ -76,7 +76,7 @@ const DomainPage = () => {
 
   return (
 
-<div className=" lg:h-[98rem] md:h-[65rem] h-[130rem] bg-[#171616] lg:-mt-[38%] md:-mt-[80%]  -mt-[140%]  text-white flex flex-col   p-4 ">
+<div className=" lg:h-[98rem] md:h-[80rem] h-[130rem] bg-[#171616] lg:-mt-[38%] md:-mt-[50%]  -mt-[140%]  text-white flex flex-col   p-4 ">
       <h1 className="text-5xl mb-8 font-barlowmedium lg:pt-7  lg:text-[88px] text-center">DOMAINS</h1>
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:ml-[15%] md:ml-[5%] ml-0 lg:pt-7 pt-4 "> 
         <div className='w-[74%] lg:w-116 lg:h-116 lg:mx-0  pt-4    flex mx-[13%] flex-col '>
