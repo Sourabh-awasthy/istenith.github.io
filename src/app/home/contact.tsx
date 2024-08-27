@@ -25,7 +25,7 @@ export default function contact (){
 </div>
 
 <footer className='  bg-[#171616] z-50'>
-    <div className=" flex flex-col  md:flex-col lg:flex-row w-full lg:px-20  px-0  justify-between lg:-mt-24  md:-mt-24 -mt-16 ">
+    <div className=" flex flex-col md:flex-row lg:flex-row w-full lg:px-28 px-0 flex-wrap justify-between lg:-mt-24  md:-mt-60 -mt-16 ">
     <div className=" flex lg:flex-row  lg:mx-28 mx-[20%]   md:mx-[24%] items-center">
         <div className="lg:h-20 lg:w-20 md:h-28 md:w-28 h-20 w-20"> <Lottie animationData= {animationmap}/></div>
       <div className='lg:ml-8 ml-8 md:ml-20'>
