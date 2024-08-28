@@ -69,7 +69,9 @@ const resolvers = {
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*',
+}));
 
 
 const startApolloServer = async () => {
