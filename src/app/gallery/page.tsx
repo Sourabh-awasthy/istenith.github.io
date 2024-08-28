@@ -8,7 +8,7 @@ import Loader from '@/components/loader';
 
 import { motion, useScroll } from "framer-motion";
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql/', 
+  uri: process.env.GRAPH_QL_URI || 'http://sumitdhiman.in:4000/graphql/',
   cache: new InMemoryCache(),
 });
 

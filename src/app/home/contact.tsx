@@ -30,14 +30,16 @@ export default function contact (){
         <div className="lg:h-20 lg:w-20 md:h-28 md:w-28 h-20 w-20"> <Lottie animationData= {animationmap}/></div>
       <div className='lg:ml-8 ml-8 md:ml-20'>
         <p className="text-1xl lg:text-1.5xl md:text-1.5xl  font-barlow">Address</p>
-        <p className="text-1xl   lg:text-1.5xl md:text-1.5xl font-barlow">NIT, Hamirpur<br />Himachal Pradesh,<br/> India, 177005</p>
+        <p className="text-1xl   lg:text-1.5xl md:text-1.5xl font-barlow">NIT Hamirpur<br />Himachal Pradesh,<br/> India, 177005</p>
       </div>
     </div>
     <div className=" flex lg:flex-row  lg:mx-12 mx-[20%] md:mt-12 lg:mt-0 mt-7 md:mx-[24%] items-center ">
     <div className="lg:h-16 lg:w-16 md:h-24 md:w-24 h-16 w-16"> <Lottie animationData= {animatiomcall}/></div>
       <div className=' ml-10 lg:ml-8 md:ml-24'>
         <p className="text-1xl lg:text-1.5xl md:text-1.5xl font-barlow">Phone</p>
-        <p className="text-1xl lg:text-1.5xl md:text-1.5xl font-actor">12345578</p>
+        <p className="text-1xl lg:text-1.5xl md:text-1.5xl font-actor">
+          +91 8580788014
+        </p>
       </div>
     </div>
     <div className="lg:mr-20 flex lg:flex-row mt-7 lg:mx-12 md:mx-[24%] mx-[20%] items-center">
