@@ -8,7 +8,7 @@ import Loader from '@/components/loader';
 
 import { motion, useScroll } from "framer-motion";
 const client = new ApolloClient({
-  uri: process.env.GRAPH_QL_URI || 'https://images.istenith.com/graphql/',
+  uri: process.env.GRAPH_QL_URI || 'https://istenith-github-io.onrender.com/graphql/',
   cache: new InMemoryCache(),
 });
 
