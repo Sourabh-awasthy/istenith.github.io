@@ -11,7 +11,7 @@ import Footer from '../../components/footer';
 import Loader from "../../components/loader"; // Import the loader component
 import SkeletonLoader from "../../components/skeltonloader";
 const client = new ApolloClient({
-  uri: process.env.GRAPH_QL_URI || 'https://images.istenith.com/graphql/',
+  uri: process.env.GRAPH_QL_URI || 'https://istenith-github-io.onrender.com/graphql/',
   cache: new InMemoryCache(),
 });
 
