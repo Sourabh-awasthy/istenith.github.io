@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run start-apollo\" \"next dev\"",
-    "start-apollo": "nodemon apollo-server.mjs",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "dev": "concurrently \"npm run start-apollo\" \"next dev\"",
+  "start-apollo": "nodemon apollo-server.mjs",
+  "build": "next build",
+  "start": "concurrently \"npm run start-apollo-prod\" \"next start\"",
+  "start-apollo-prod": "node apollo-server.mjs",
+  "lint": "next lint"
+},
   "dependencies": {
     "@apollo/client": "^3.10.8",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
