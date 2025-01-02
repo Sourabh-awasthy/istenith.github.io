@@ -337,7 +337,7 @@ return (
 <motion.div
 initial={{ opacity: 0, y: 200 }}
 whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: .2 }}
+transition={{ duration: 1 }}
 className=""
 >
 
@@ -345,9 +345,9 @@ className=""
 <DomainPage/>
  </motion.div>
  <motion.div
-initial={{ opacity: 0, y: 180 }}
+initial={{ opacity: 0, y: 170 }}
 whileInView={{ opacity: 1, y: -50 }}
-transition={{ duration: .2 }}
+transition={{ duration: .4 }}
 className=""
 >
 

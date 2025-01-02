@@ -4,10 +4,8 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 const typeDefs = gql`
   type Member {
@@ -49,7 +47,6 @@ const typeDefs = gql`
   }
 `;
 
-
 const resolvers = {
   Query: {
     members: async () => {
@@ -57,8 +54,8 @@ const resolvers = {
       return profileDetails;
     },
     blogPosts: async () => {
-      // Implement logic for fetching blogPosts data
-      return []; // Placeholder, replace with actual data fetching logic
+      const { blogData } = await import(pathToFileURL(path.resolve(__dirname, './data/blog_posts.mjs')).href);
+      return blogData;
     },
     gallery: async () => {
       const { data } = await import(pathToFileURL(path.resolve(__dirname, './data/data.mjs')).href);
@@ -67,30 +64,25 @@ const resolvers = {
   },
 };
 
-
 const app = express();
-app.use(cors({
-  origin: '*',
-}));
-
+app.use(cors({ origin: '*' }));
 
 const startApolloServer = async () => {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    introspection: true, 
-    playground: true, 
+    introspection: true,
+    playground: true,
   });
 
   await server.start();
   server.applyMiddleware({ app, path: '/graphql' });
 
-  const PORT = 4000;
+  const PORT = 5000;
   app.listen(PORT, () => {
     console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
   });
 };
-
 
 startApolloServer().catch((err) => {
   console.error('Error starting Apollo Server:', err);
