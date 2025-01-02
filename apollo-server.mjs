@@ -65,7 +65,9 @@ const resolvers = {
 };
 
 const app = express();
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: '*',
+}));
 
 const startApolloServer = async () => {
   const server = new ApolloServer({
@@ -78,7 +80,7 @@ const startApolloServer = async () => {
   await server.start();
   server.applyMiddleware({ app, path: '/graphql' });
 
-  const PORT = 5000;
+  const PORT = 4000;
   app.listen(PORT, () => {
     console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
   });
