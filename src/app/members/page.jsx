@@ -11,13 +11,11 @@ import Footer from '../../components/footer';
 import Loader from "../../components/loader";
 import SkeletonLoader from "../../components/skeltonloader";
 
-// Apollo Client setup
 const client = new ApolloClient({
-  uri: process.env.GRAPH_QL_URI || 'http://localhost:4000/graphql', // Make sure this matches your server's URL
+  uri: process.env.GRAPH_QL_URI || 'https://images.istenith.com/graphql/', 
   cache: new InMemoryCache(),
 });
 
-// GraphQL Query
 const GET_MEMBERS = gql`
   query GetMembers {
     members {
@@ -40,13 +38,11 @@ const Team = () => {
   const [showImage, setShowImage] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Apollo query hook
   const { loading, error, data } = useQuery(GET_MEMBERS, {
     client,
     fetchPolicy: 'cache-and-network',
   });
 
-  // Scroll progress animation
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
@@ -205,7 +201,6 @@ const Team = () => {
   );
 };
 
-// Wrap Team component with ApolloProvider
 const TeamWithApollo = () => (
   <ApolloProvider client={client}>
     <Team />

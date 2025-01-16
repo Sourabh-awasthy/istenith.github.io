@@ -21,8 +21,29 @@ const typeDefs = gql`
     about: String
   }
 
+  type BlogPost {
+    id: ID!
+    blog_title: String!
+    image: String!
+    author: String!
+    tags: [String!]!
+    description: String!
+    mdfile: String!
+  }
+
+  type Gallery {
+    id: ID!
+    image: String!
+    event: String
+    title: String
+    desc: String
+    set: String
+  }
+
   type Query {
     members: [Member]
+    blogPosts: [BlogPost]
+    gallery: [Gallery]
   }
 `;
 
@@ -32,12 +53,20 @@ const resolvers = {
       const { profileDetails } = await import(pathToFileURL(path.resolve(__dirname, './data/member_data.mjs')).href);
       return profileDetails;
     },
+    blogPosts: async () => {
+      const { blogData } = await import(pathToFileURL(path.resolve(__dirname, './data/blog_posts.mjs')).href);
+      return blogData;
+    },
+    gallery: async () => {
+      const { data } = await import(pathToFileURL(path.resolve(__dirname, './data/data.mjs')).href);
+      return data;
+    },
   },
 };
 
 const app = express();
 app.use(cors({
-  origin: '*', // Allow all origins for development
+  origin: '*',
 }));
 
 const startApolloServer = async () => {
