@@ -34,7 +34,7 @@ const GET_MEMBERS = gql`
 `;
 
 const Team = () => {
-  const [initialYear, setYear] = useState("final");
+  const [initialYear, setYear] = useState("FI");
   const [showImage, setShowImage] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -71,6 +71,8 @@ const Team = () => {
       case 'Third':
       case 'first':
         return 'text-3xl md:text-5xl lg:text-6xl';
+      case 'FACULTY':
+        return 'text-3xl md:text-5xl lg:text-4xl';
       default:
         return 'text-3xl md:text-5xl lg:text-6xl';
     }
@@ -151,13 +153,24 @@ const Team = () => {
 
           <div className="flex flex-col items-center lg:items-start lg:right-12 lg:mt-0 -mt-36 ">
             <div className={`font-barlow ${getFontSize(initialYear)} font-f2 flex flex-row lg:flex-col items-center lg:items-start text-center lg:text-left`}>
-              <div>{initialYear.toUpperCase()}</div>
-              <div className="lg:mt-2 ml-2 lg:ml-0">YEAR</div>
+              {/* Conditionally display either the year or "INCHARGE" */}
+              {initialYear === 'FI' ? (
+                <div className='flex flex-col text-4xl'> <div className=''>FACULTY</div>
+                <div className='mt-1'>INCHARGE</div></div>
+              ) : (
+                <>
+                  <div>{initialYear.toUpperCase()}</div>
+                  <div className="lg:mt-2 ml-2 lg:ml-0">YEAR</div>
+                </>
+              )}
             </div>
 
             <div className="flex flex-col items-center lg:items-start w-full mt-0 mb-8 lg:mt-80">
               <div className="sm:border-t-2 sm:border-white sm:w-3/4 lg:w-full mx-auto mb-4"></div>
               <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-0 lg:-ml-8 sm:ml-0">
+              <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl  transition-transform transform font-actor hover:scale-105">
+                  <button onClick={() => setYear('FI')} className="w-full ">FI ISTE</button>
+                </div>
                 <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform transform font-actor hover:scale-105">
                   <button onClick={() => setYear('final')} className="w-full ">FINAL YEAR</button>
                 </div>
@@ -170,11 +183,11 @@ const Team = () => {
                 <div className="border-2 border-white lg:border-hidden rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
                   <button onClick={() => setYear('first')} className="w-full ">FIRST YEAR</button>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
       <Footer />
@@ -182,7 +195,7 @@ const Team = () => {
   );
 };
 
-const TeamWithApollo = () => (
+const TeamWithApollo = () => (      
   <ApolloProvider client={client}>
     <Team />
   </ApolloProvider>

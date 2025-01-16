@@ -1,6 +1,20 @@
 export const profileDetails = [
     
     // Finalyear..............
+
+    { 
+      name: "Dr. Saurabh Kumar",
+      section: "FI",
+      post: "Faculty Incharge",
+      linkedin: "https://www.linkedin.com/in/dr-saurabh-kumar-a7799412?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instagram: "/",
+      img: "/assets/images/finalyear/fi.webp",
+      rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
+      branch: "Associate Professor",
+      location: "Uttar Pradesh",
+      about:
+        "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
+    },
     
     { 
         name: "Aditya Rana",
@@ -657,16 +671,7 @@ export const profileDetails = [
   branch: "Computer Science and Engineering (Dual Degree)",
   location: "Mandi",
 },
-{ 
-  name: "Kamakshi Kaushal",
-  section: "first",
-  post: "Volunteer",
-  linkedin: "https://www.linkedin.com/in/kamakshi-kaushal-3ab8a7334",
-  instagram: "https://www.instagram.com/kamakshikaushal_/",
-  img: "/assets/images/firstyear/Kamakshi.webp",
-  branch: "Mathematics and Computing Engineering",
-  location: "Shimla",
-},
+
 { 
   name: "Lakshya Sharma",
   section: "first",
@@ -806,7 +811,7 @@ export const profileDetails = [
   linkedin: "https://www.linkedin.com/in/suyog-waghmare-708403329",
   instagram: "https://www.instagram.com/su_yog_321?igsh=MW10bGdoMGhhdnZ6aA==",
   img: "/assets/images/firstyear/Suyog.webp",
-  branch: "Mathematics and Computing Engeneering ",
+  branch: "Mathematics and Computing Engineering ",
   location: "Pune",
 },
 { 
@@ -838,7 +843,7 @@ export const profileDetails = [
   linkedin: "https://www.linkedin.com/in/tanvi-jain-93096432a/",
   instagram: "https://www.instagram.com/tanvijain_._?igsh=ZzJ5dG43Zms3bzg2",
   img: "/assets/images/firstyear/Tanvi.webp",
-  branch: " Civil engineering ",
+  branch: " Civil Engineering ",
   location: "Jaipur ",
 },
 

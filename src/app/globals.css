@@ -487,3 +487,13 @@ margin-left: 3rem;
 }
 
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: If you want to ensure the body still scrolls */
+body {
+  overflow: scroll; /* Keeps scrolling but hides the scrollbar */
+}
+
+

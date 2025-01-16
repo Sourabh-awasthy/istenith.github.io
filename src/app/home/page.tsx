@@ -12,6 +12,7 @@ import React, { useState } from 'react';
 import DomainPage from './domains';
 import Image from 'next/image'
 import Contactus from './contact';
+import { Button } from "@/components/ui/moving-border";
 
 import Loader from '@/components/loader';
 import { motion, useScroll } from "framer-motion";
@@ -55,7 +56,7 @@ const Navbar = () => {
 
       {/* Hamburger menu (visible on mobile) */}
       <div
-        className={`md:hidden flex flex-col justify-center items-center cursor-pointer transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+        className={`md:hidden  flex flex-col justify-center items-center cursor-pointer transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
         onClick={toggleMenu}
       >
         <div
@@ -164,7 +165,48 @@ return (
   quality={100}
   unoptimized={true}
   className=" -left-1 logo-44 relative hidden lg:block md:block w-20 h-auto z-50 text-white/70" alt="ISTE Logo" / >
+<Link href="https://prody.istenith.com/" target="_blank" rel="noopener noreferrer">
+  <div className='text-white text-4xl font-barlow absolute lg:right-8 lg:top-7   top-20'>
+    <span className="coming-soon text-4xl">PRODYOGIKI'25</span>
+  </div>
+</Link>
+
+<style jsx>{`
+  .coming-soon {
+    display: inline-block;
+    padding-left: 10px;
+    animation: marquee 3s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .coming-soon {
+      animation: marqueeLarge 5s linear infinite;
+    }
+
+    @keyframes marqueeLarge {
+      0% {
+        transform: translateX(200%);
+      }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+  }
+`}</style>
+
+  
   <div className="text-[#ffffff] font-actor lg:pt-0 md:pt-0 pt-28 ml-nith text-7xl">NITH</div>
+
+ 
 
   <div className="flex flex-col items-center justify-center absolute top-iste left-1/4">
 
