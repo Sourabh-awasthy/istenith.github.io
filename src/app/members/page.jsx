@@ -11,11 +11,13 @@ import Footer from '../../components/footer';
 import Loader from "../../components/loader";
 import SkeletonLoader from "../../components/skeltonloader";
 
+// Apollo Client setup
 const client = new ApolloClient({
-  uri: process.env.GRAPH_QL_URI || 'http://localhost:5000/graphql',
+  uri: process.env.GRAPH_QL_URI || 'http://localhost:4000/graphql', // Make sure this matches your server's URL
   cache: new InMemoryCache(),
 });
 
+// GraphQL Query
 const GET_MEMBERS = gql`
   query GetMembers {
     members {
@@ -38,11 +40,13 @@ const Team = () => {
   const [showImage, setShowImage] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Apollo query hook
   const { loading, error, data } = useQuery(GET_MEMBERS, {
     client,
     fetchPolicy: 'cache-and-network',
   });
 
+  // Scroll progress animation
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
@@ -80,6 +84,12 @@ const Team = () => {
 
   if (isLoading || loading) {
     return <Loader />;
+  }
+
+  // Error handling
+  if (error) {
+    console.error('Error fetching data:', error);
+    return <div>Error: {error.message}</div>;
   }
 
   return (
@@ -169,13 +179,13 @@ const Team = () => {
             <div className="flex flex-col items-center lg:items-start w-full mt-0 mb-8 lg:mt-80">
               <div className="sm:border-t-2 sm:border-white sm:w-3/4 lg:w-full mx-auto mb-4"></div>
               <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-0 lg:-ml-8 sm:ml-0">
-              <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl transition-transform transform font-actor hover:scale-105">
+                <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:-ml-12 lg:text-2xl text-1.3xl transition-transform transform font-actor hover:scale-105">
                   <button onClick={() => setYear('FI')} className="w-full">FI ISTE</button>
                 </div>
                 <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform transform font-actor hover:scale-105">
                   <button onClick={() => setYear('final')} className="w-full">FINAL YEAR</button>
                 </div>
-                <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
+                <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:ml-4 lg:text-2xl text-1.3xl text-center transition-transform transform hover:scale-105">
                   <button onClick={() => setYear('Third')} className="w-full">THIRD YEAR</button>
                 </div>
                 <div className="border-2 border-white lg:border-hidden rounded-lg sm:p-2 lg:ml-8 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
@@ -184,7 +194,6 @@ const Team = () => {
                 <div className="border-2 border-white lg:border-hidden rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
                   <button onClick={() => setYear('first')} className="w-full">FIRST YEAR</button>
                 </div>
-               
               </div>
             </div>
           </div>
@@ -196,6 +205,7 @@ const Team = () => {
   );
 };
 
+// Wrap Team component with ApolloProvider
 const TeamWithApollo = () => (
   <ApolloProvider client={client}>
     <Team />

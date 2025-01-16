@@ -17,7 +17,7 @@ export const topics = [
             "createdAt": "2024-07-25T22:10:13.564Z",
             "updatedAt": "2024-07-25T22:10:13.564Z",
             "__v": 0,
-             "img":"assets/images/projects/ui:ux.webp",
+             "img":"assets/images/projects/ui.webp",
             link : "https://space-traffic-managment.webflow.io/"
 
         },
