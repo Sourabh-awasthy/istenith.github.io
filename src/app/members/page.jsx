@@ -8,11 +8,11 @@ import Image from 'next/image';
 import { motion, useScroll } from 'framer-motion';
 import Navbar from '@/components/navbar1';
 import Footer from '../../components/footer';
-import Loader from "../../components/loader"; // Import the loader component
+import Loader from "../../components/loader";
 import SkeletonLoader from "../../components/skeltonloader";
 
 const client = new ApolloClient({
-  uri: process.env.GRAPH_QL_URI || 'https://images.istenith.com/graphql/',
+  uri: process.env.GRAPH_QL_URI || 'http://localhost:5000/graphql',
   cache: new InMemoryCache(),
 });
 
@@ -91,15 +91,15 @@ const Team = () => {
       />
       <div className="min-h-screen bg-[#171616] text-white">
         <div className="bg-[#171616] lg:w-full top-0 z-50">
-          <div className="lg:ml-16  mx-auto lg:px-0 pt-20 text-[50px] md:text-6xl font-actor text-center lg:text-start">ISTE NITH</div>
+          <div className="lg:ml-16 mx-auto lg:px-0 pt-20 text-[50px] md:text-6xl font-actor text-center lg:text-start">ISTE NITH</div>
           <div className="border-t-2 border-white mx-auto -mt-2 lg:my-1 w-10/12 lg:w-11/12"></div>
         </div>
 
         <div className="flex flex-col-reverse lg:flex-row mt-16 pt-24 lg:pt-0 lg:mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-4 w-full md:w-full lg:w-9/12 lg:mx-12">
+          <div className={`grid ${ 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-4'} w-full md:w-full lg:w-9/12 lg:mx-12`}>
             {filteredProfiles.map((details, index) => (
               <motion.div
-                className="w-full mb-6 md:mb-8 lg:mb-0"
+                className={`${initialYear ===  'w-full mb-6 md:mb-8 lg:mb-0'}`}
                 key={`${initialYear}-${index}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -151,12 +151,13 @@ const Team = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center lg:items-start lg:right-12 lg:mt-0 -mt-36 ">
+          <div className="flex flex-col items-center lg:items-start lg:right-12 lg:mt-0 -mt-36">
             <div className={`font-barlow ${getFontSize(initialYear)} font-f2 flex flex-row lg:flex-col items-center lg:items-start text-center lg:text-left`}>
-              {/* Conditionally display either the year or "INCHARGE" */}
               {initialYear === 'FI' ? (
-                <div className='flex flex-col text-4xl'> <div className=''>FACULTY</div>
-                <div className='mt-1'>INCHARGE</div></div>
+                <div className="flex flex-col text-4xl">
+                  <div>FACULTY</div>
+                  <div className="mt-1">INCHARGE</div>
+                </div>
               ) : (
                 <>
                   <div>{initialYear.toUpperCase()}</div>
@@ -168,22 +169,22 @@ const Team = () => {
             <div className="flex flex-col items-center lg:items-start w-full mt-0 mb-8 lg:mt-80">
               <div className="sm:border-t-2 sm:border-white sm:w-3/4 lg:w-full mx-auto mb-4"></div>
               <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-0 lg:-ml-8 sm:ml-0">
-              <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl  transition-transform transform font-actor hover:scale-105">
-                  <button onClick={() => setYear('FI')} className="w-full ">FI ISTE</button>
+              <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl transition-transform transform font-actor hover:scale-105">
+                  <button onClick={() => setYear('FI')} className="w-full">FI ISTE</button>
                 </div>
                 <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform transform font-actor hover:scale-105">
-                  <button onClick={() => setYear('final')} className="w-full ">FINAL YEAR</button>
+                  <button onClick={() => setYear('final')} className="w-full">FINAL YEAR</button>
                 </div>
                 <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
-                  <button onClick={() => setYear('Third')} className="w-full ">THIRD YEAR</button>
+                  <button onClick={() => setYear('Third')} className="w-full">THIRD YEAR</button>
                 </div>
                 <div className="border-2 border-white lg:border-hidden rounded-lg sm:p-2 lg:ml-8 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
-                  <button onClick={() => setYear('second')} className="w-full ">SECOND YEAR</button>
+                  <button onClick={() => setYear('second')} className="w-full">SECOND YEAR</button>
                 </div>
                 <div className="border-2 border-white lg:border-hidden rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform font-actor transform hover:scale-105">
-                  <button onClick={() => setYear('first')} className="w-full ">FIRST YEAR</button>
+                  <button onClick={() => setYear('first')} className="w-full">FIRST YEAR</button>
                 </div>
-
+               
               </div>
             </div>
           </div>
@@ -195,7 +196,7 @@ const Team = () => {
   );
 };
 
-const TeamWithApollo = () => (      
+const TeamWithApollo = () => (
   <ApolloProvider client={client}>
     <Team />
   </ApolloProvider>

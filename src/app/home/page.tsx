@@ -166,7 +166,7 @@ return (
   unoptimized={true}
   className=" -left-1 logo-44 relative hidden lg:block md:block w-20 h-auto z-50 text-white/70" alt="ISTE Logo" / >
 <Link href="https://prody.istenith.com/" target="_blank" rel="noopener noreferrer">
-  <div className='text-white text-4xl font-barlow absolute lg:right-8 lg:top-7   top-20'>
+  <div className='text-white text-4xl font-barlowb absolute lg:right-8 lg:top-7   top-20'>
     <span className="coming-soon text-4xl">PRODYOGIKI'25</span>
   </div>
 </Link>
