@@ -174,10 +174,10 @@ const Team = () => {
 
             <div className="flex flex-col items-center lg:items-start w-full mt-0 mb-8 lg:mt-80">
               <div className="sm:border-t-2 sm:border-white sm:w-3/4 lg:w-full mx-auto mb-4"></div>
-              <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-0 lg:-ml-8 sm:ml-0">
-                <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:-ml-12 lg:text-2xl text-1.3xl transition-transform transform font-actor hover:scale-105">
+              <div className="border-2 lg:border-hidden border-white w-40 mb-4 lg:mb-0 rounded-lg sm:p- lg:p-0 lg:-ml-12 lg:text-2xl text-1.3xl transition-transform transform font-actor hover:scale-105">
                   <button onClick={() => setYear('FI')} className="w-full">FI ISTE</button>
                 </div>
+              <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-0 lg:-ml-8 sm:ml-0">
                 <div className="border-2 lg:border-hidden border-white rounded-lg sm:p-2 lg:p-0 lg:text-2xl text-1.3xl text-center transition-transform transform font-actor hover:scale-105">
                   <button onClick={() => setYear('final')} className="w-full">FINAL YEAR</button>
                 </div>
