@@ -165,7 +165,7 @@ return (
   quality={100}
   unoptimized={true}
   className=" -left-1 logo-44 relative hidden lg:block md:block w-20 h-auto z-50 text-white/70" alt="ISTE Logo" / >
-<Link href="https://prody.istenith.com/" target="_blank" rel="noopener noreferrer">
+  {/*<Link href="https://prody.istenith.com/" target="_blank" rel="noopener noreferrer">
   <div className='text-white text-4xl font-barlowb absolute lg:right-8 lg:top-7   top-20'>
     <span className="coming-soon text-4xl">PRODYOGIKI'25</span>
   </div>
@@ -202,6 +202,7 @@ return (
     }
   }
 `}</style>
+*/}
 
   
   <div className="text-[#ffffff] font-actor lg:pt-0 md:pt-0 pt-28 ml-nith text-7xl">NITH</div>
