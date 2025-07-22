@@ -8,7 +8,8 @@
     "start-apollo-prod": "node apollo-server.mjs",
     "build": "next build",
     "start": "concurrently \"npm run start-apollo-prod\" \"next start\"",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-frontend": "next start"
   },
   "dependencies": {
     "@apollo/client": "^3.10.8",
