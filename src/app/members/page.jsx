@@ -12,7 +12,7 @@ import Loader from "../../components/loader";
 import SkeletonLoader from "../../components/skeltonloader";
 
 const client = new ApolloClient({
-  uri: process.env.GRAPH_QL_URI || 'https://images.istenith.com/graphql/', 
+  uri: process.env.GRAPH_QL_URI || 'https://istenith-github-io-1.onrender.com/graphql', 
   cache: new InMemoryCache(),
 });
 
