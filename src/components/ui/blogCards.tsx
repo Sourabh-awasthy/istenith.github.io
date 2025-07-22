@@ -22,10 +22,13 @@ export default function ExpandableCardDemo() {
       }
     }
 
-    if (active && typeof active === "object") {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+    // Check if we're running in the browser before accessing document
+    if (typeof window !== 'undefined') {
+      if (active && typeof active === "object") {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
     }
 
     window.addEventListener("keydown", onKeyDown);

@@ -1,12 +1,15 @@
-
 import { BiSolidContact } from "react-icons/bi";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { HiOutlineMailOpen } from "react-icons/hi";   
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import animationmap from "./map2.json";
 import animatiomcontact from "./mail1.json";
 import animatiomcall from "./call3.json";
 import animationcontact from "./contact7.json";
+
+// Dynamically import Lottie with SSR disabled
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+
 export default function contact (){
     return(
         <>

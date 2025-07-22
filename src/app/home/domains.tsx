@@ -1,12 +1,15 @@
 "use client";
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import animationData from "./tech1.json";
 import animationData2 from "./design.json";
 import animationData3 from "./finance.json";
 import animationData4 from "./pr.json"
 import { DivEvent } from '@tsparticles/engine';
+
+// Dynamically import Lottie with SSR disabled
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const DomainPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

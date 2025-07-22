@@ -12,12 +12,15 @@ export const useOutsideClick = (
       callback(event);
     };
 
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
+    // Check if we're running in the browser before accessing document
+    if (typeof window !== "undefined") {
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
 
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    }
   }, [ref, callback]);
 };
